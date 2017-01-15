@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:mPlayer"
         mc:Ignorable="d"
-        Title="Library" Height="500" Width="300">
+        Title="Library" Height="500" Width="400">
     <Grid>
         <Grid.ColumnDefinitions>
         <ColumnDefinition Width="1*" />
@@ -43,11 +43,12 @@
         </Grid.RowDefinitions>
         <ListView x:Name="libraryListView" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="16" Grid.RowSpan="10">
             <ListView.View>
-            <GridView>
-                <GridViewColumn DisplayMemberBinding="{Binding Path=Album}" Header="Album"></GridViewColumn>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Author}" Header="Autor"></GridViewColumn>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Year}" Header="Rok"></GridViewColumn>
-            </GridView>
+               <GridView AllowsColumnReorder="True">
+                <GridViewColumn DisplayMemberBinding="{Binding Path=title}" Header="Album"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=author}" Header="Autor"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=year}" Header="Rok"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=label}" Header="Label"></GridViewColumn>
+                </GridView>
             </ListView.View>
         </ListView>
     </Grid>

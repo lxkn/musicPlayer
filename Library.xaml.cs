@@ -12,8 +12,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using System;
-using System.Linq;
 using System.Xml.Linq;
 
 namespace mPlayer
@@ -24,14 +22,16 @@ namespace mPlayer
     public partial class Library : Window
     {
         private static Library singletonInstance;
-        private List <String> albumList;
+        private List<Album> albumList;
         
         private Library()
         {
+            
             /*String xml = "<albumList><object><album></album><author></author><year></year></object></albumList>";
             XDocument doc = XDocument.Parse(xml);
             albumList = doc.Root.Elements("object").Select(x => x.album).ToList();*/
             InitializeComponent();
+            InitBinding();
         }
         public static Library Instance
         {
@@ -43,6 +43,14 @@ namespace mPlayer
                 }
                 return singletonInstance;
             }
+        }
+        private void InitBinding()
+        {
+            albumList = new List<Album>();
+            Album album = new Album("Tytul", "Autor", "1995", "ProstoLabel");
+            albumList.Add(album);
+            albumList.Add(new Album("Styl życia G'N.O.J.A.","Peja","6 grudnia 2008","Fonografika"));
+            libraryListView.ItemsSource = albumList;
         }
     }
 }

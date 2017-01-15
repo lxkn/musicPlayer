@@ -23,6 +23,7 @@ namespace mPlayer
         {
             InitializeComponent();
             Library lb = Library.Instance;
+            lb.StickyWino
             lb.Show();
         }
     }
