@@ -55,16 +55,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Album.cs" />
+    <Compile Include="Class\Album.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="PausedState.cs" />
-    <Compile Include="PlayingState.cs" />
-    <Compile Include="PlayState.cs" />
-    <Compile Include="Song.cs" />
-    <Compile Include="StoppedState.cs" />
+    <Compile Include="Class\Button.cs" />
+    <Compile Include="Class\PausedState.cs" />
+    <Compile Include="Class\PlayingState.cs" />
+    <Compile Include="Class\PlayState.cs" />
+    <Compile Include="Class\Song.cs" />
+    <Compile Include="Class\StoppedState.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Library.xaml.cs">

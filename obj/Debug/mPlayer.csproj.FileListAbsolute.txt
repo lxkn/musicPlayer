@@ -1,19 +1,14 @@
 c:\users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\bin\Debug\mPlayer.exe.config
 c:\users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\mPlayer.csprojResolveAssemblyReference.cache
-c:\users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\MainWindow.g.cs
-c:\users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\App.g.cs
 c:\users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\mPlayer_MarkupCompile.cache
 c:\users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\mPlayer_MarkupCompile.lref
 C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\bin\Debug\mPlayer.exe
 C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\bin\Debug\mPlayer.pdb
-C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\MainWindow.baml
 C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\mPlayer.g.resources
 C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\mPlayer.Properties.Resources.resources
 C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\mPlayer.csproj.GenerateResource.Cache
 C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\mPlayer.exe
 C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\mPlayer.pdb
-C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\Library.g.cs
-C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\Library.baml
 D:\musicPlayer\bin\Debug\mPlayer.exe.config
 D:\musicPlayer\obj\Debug\mPlayer.exe
 D:\musicPlayer\obj\Debug\mPlayer.pdb
@@ -30,3 +25,8 @@ D:\musicPlayer\obj\Debug\MainWindow.baml
 D:\musicPlayer\obj\Debug\mPlayer.g.resources
 D:\musicPlayer\obj\Debug\mPlayer.Properties.Resources.resources
 D:\musicPlayer\obj\Debug\mPlayer.csproj.GenerateResource.Cache
+C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\Library.g.cs
+C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\MainWindow.g.cs
+C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\App.g.cs
+C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\Library.baml
+C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\MainWindow.baml
