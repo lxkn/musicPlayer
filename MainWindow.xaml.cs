@@ -17,14 +17,50 @@ namespace mPlayer
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
     public partial class MainWindow : Window
     {
+        //obecny stan odtwarzacza
+        private PlayState current_state;
+
+
         public MainWindow()
         {
             InitializeComponent();
+            // stan poczatkowy to Stopped
+            current_state = new StoppedState();
             Library lb = Library.Instance;
-            lb.StickyWino
-            lb.Show();
+            lb.Show();   
+        }
+
+        
+
+        // getter and setter dla stanu
+        internal PlayState Current_state
+        {
+            get
+            {
+                return current_state;
+            }
+
+            set
+            {
+                current_state = value;
+            }
+        }
+
+
+        //TEST STANOW musialem wstawic przykladowe buttony by wywolac funkcje play,stop ze stanow i zobaczyc cyz dziala
+        //sprawdzic w output czy sie zmienia
+        private void stop_click(object sender, RoutedEventArgs e)
+        {
+            current_state.stopSong(this);
+        }
+
+        private void play_click(object sender, RoutedEventArgs e)
+        {
+            current_state.playSong(this);
         }
     }
+
 }
