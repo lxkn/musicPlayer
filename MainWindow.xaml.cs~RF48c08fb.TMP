@@ -13,8 +13,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using mPlayer.Classes;
 using mPlayer.Views;
-using System.IO;
-
 namespace mPlayer
 {
     /// <summary>
@@ -48,22 +46,9 @@ namespace mPlayer
             // stan poczatkowy to Stopped
             current_state = new StoppedState();
             Library lb = Library.Instance;
-            lb.Show();
-            InitBinding();   
+            lb.Show();   
         }
-        private void InitBinding()
-        {
-            var source = new BitmapImage();
-            using (var stream = new FileStream("volume.png", FileMode.Open))
-            {
-                source.BeginInit();
-                source.CacheOption = BitmapCacheOption.OnLoad;
-                source.StreamSource = stream;
-                source.EndInit();
-                source.Freeze();
-            }
-            imageButton.Source = source;
-        }
+
         
 
         // getter and setter dla stanu

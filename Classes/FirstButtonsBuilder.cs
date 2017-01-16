@@ -10,45 +10,40 @@ namespace mPlayer.Classes
     {
         public override void buildNextButton()
         {
-            throw new NotImplementedException();
+            bp.setNextButton();
         }
 
         public override void buildPauseButton()
         {
-            throw new NotImplementedException();
+            bp.setPauseButton();
         }
 
         public override void buildPlayButton()
         {
-            throw new NotImplementedException();
+            bp.setPlayButton();
         }
 
         public override void buildPreviousButton()
         {
-            throw new NotImplementedException();
+            bp.setPreviousButton();
         }
 
         public override void buildRepeatButton()
         {
-            throw new NotImplementedException();
+            bp.setRepeatButton();
         }
 
         public override void buildShuffleButton()
         {
-            throw new NotImplementedException();
+            bp.setShuffleButton();
         }
 
         public override void buildStopButton()
         {
-            throw new NotImplementedException();
+            bp.setStopButton();
         }
 
         public override ButtonsPanel getPanel()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void newPanel()
         {
             throw new NotImplementedException();
         }

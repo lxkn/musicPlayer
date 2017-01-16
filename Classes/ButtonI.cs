@@ -8,10 +8,16 @@ namespace mPlayer.Classes
 {
     public abstract class ButtonI
     {
-        ButtonsPanel bp = new ButtonsPanel();
+        protected ButtonsPanel bp;
 
-        public abstract void newPanel();
-        public abstract ButtonsPanel getPanel();
+        public void newPanel()
+        {
+            bp = new ButtonsPanel();
+        }
+        public  ButtonsPanel getPanel()
+        {
+            return bp;
+        }
         public abstract void buildPlayButton();
         public abstract void buildStopButton();
         public abstract void buildPauseButton();
