@@ -10,37 +10,37 @@ namespace mPlayer.Classes
     {
         public override void buildNextButton()
         {
-            bp.setNextButton("next.png");
+            bp.nextPath="next.png";
         }
 
         public override void buildPauseButton()
         {
-            bp.setPauseButton("pause.png");
+            bp.pausePath = "pause.png";
         }
 
         public override void buildPlayButton()
         {
-            bp.setPlayButton("play.png");
+            bp.playPath = "play.png";
         }
 
         public override void buildPreviousButton()
         {
-            bp.setPreviousButton("previous.png");
+            bp.previousPath ="previous.png";
         }
 
         public override void buildRepeatButton()
         {
-            bp.setRepeatButton("repeat.png");
+            bp.repeatPath = "repeat.png";
         }
 
         public override void buildShuffleButton()
         {
-            bp.setShuffleButton("shuffle.png");
+            bp.shufflePath = "shuffle.png";
         }
 
         public override void buildStopButton()
         {
-            bp.setStopButton("stop.png");
+            bp.stopPath = "stop.png";
         }
         
     }

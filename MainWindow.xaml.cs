@@ -44,18 +44,17 @@ namespace mPlayer
             Library lb = Library.Instance;
             lb.Show();
             //Podpinanie buttonów do obrazka
-            InitBinding();   
-
+            InitBinding(bPanelFirst);
         }
-        private void InitBinding()
+        private void InitBinding(ButtonsPanel bp)
         {
-            
-            imageButton.Source = setImg("volume.png");
-            imageButton1.Source = setImg("volume.png");
-            imageButton2.Source = setImg("volume.png");
-            imageButton3.Source = setImg("volume.png");
-            imageButton4.Source = setImg("volume.png");
-            imageButton5.Source = setImg("volume.png");
+
+            imageButton.Source = setImg(bp.playPath);
+            imageButton1.Source = setImg(bp.playPath);
+            imageButton2.Source = setImg(bp.playPath);
+            imageButton3.Source = setImg(bp.playPath);
+            imageButton4.Source = setImg(bp.playPath);
+            imageButton5.Source = setImg(bp.playPath);
 
         }
         //Ustawianie path do Obrazka
