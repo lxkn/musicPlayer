@@ -61,9 +61,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Class\Button.cs" />
+    <Compile Include="Class\ButtonsPanel.cs" />
+    <Compile Include="Class\FirstButtonsBuilder.cs" />
     <Compile Include="Class\PausedState.cs" />
     <Compile Include="Class\PlayingState.cs" />
     <Compile Include="Class\PlayState.cs" />
+    <Compile Include="Class\SecondButtonsBuilder.cs" />
     <Compile Include="Class\Song.cs" />
     <Compile Include="Class\StoppedState.cs" />
   </ItemGroup>
@@ -71,8 +74,8 @@
     <Compile Include="Library.xaml.cs">
       <DependentUpon>Library.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="MusicPlayer.xaml.cs">
+      <DependentUpon>MusicPlayer.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -105,7 +108,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="MusicPlayer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace mPlayer
+namespace mPlayer.Class
 {
-    class StoppedState : PlayState
+    class PlayingState : PlayState
     {
         public override void nextSong(MainWindow context)
         {
@@ -15,13 +15,13 @@ namespace mPlayer
 
         public override void pauseSong(MainWindow context)
         {
-            Console.WriteLine("Zatrzymanie piosenki na stooped -stan bez zmian");
+            Console.WriteLine("Zatrzymanie piosenki - zmiana stanu na pused");
+            base.setState(context, new PausedState());
         }
 
         public override void playSong(MainWindow context)
         {
-            Console.WriteLine("Odtwarzacz zaczyna grac przechodzi w stan playingState");
-            base.setState(context, new PlayingState());
+            Console.WriteLine("Nic sie nie dzieje odtwarzacz gra");
         }
 
         public override void previousSong(MainWindow context)
@@ -31,7 +31,8 @@ namespace mPlayer
 
         public override void stopSong(MainWindow context)
         {
-            Console.WriteLine("Piosenka jest nieodtwarzana nic sie nie dzieje");
+            Console.WriteLine("Odtwarzacz przestaje grac i wchodzi w stan stoppedState");
+            base.setState(context, new StoppedState());
         }
     }
 }

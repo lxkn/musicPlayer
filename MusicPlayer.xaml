@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:mPlayer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="780">
+        Title="MusicPlayer" Height="500" Width="780">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" />

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace mPlayer
+namespace mPlayer.Class
 {
     abstract class PlayState
     {

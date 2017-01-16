@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using mPlayer.Classes;
 namespace mPlayer
 {
     /// <summary>
@@ -23,6 +23,21 @@ namespace mPlayer
         //obecny stan odtwarzacza
         private PlayState current_state;
 
+        private ButtonI buttonsBuild;
+        public ButtonI Build
+        {
+            get { return buttonsBuild; }
+            set { buttonsBuild = value; }
+        }
+
+        public void getPanel()
+        {
+
+        }
+        public void createButtons()
+        {
+
+        }
 
         public MainWindow()
         {

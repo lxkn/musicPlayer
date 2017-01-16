@@ -1,0 +1,56 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace mPlayer.Class
+{
+    class FirstButtonsBuilder : Button
+    {
+        public override void buildNextButton()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void buildPauseButton()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void buildPlayButton()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void buildPreviousButton()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void buildRepeatButton()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void buildShuffleButton()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void buildStopButton()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override ButtonsPanel getPanel()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void newPanel()
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
