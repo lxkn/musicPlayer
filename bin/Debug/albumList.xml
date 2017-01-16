@@ -5,7 +5,7 @@
 		<author>Tytul</author>
 		<year>1995</year>
 		<label>Label</label>
-		<!--<songList>
+		<songList>
 			<song>
 				<length>315</length>
 				<title>Tytulek</title>
@@ -30,6 +30,6 @@
 				<number>3</number>
 				<year>1995</year>
 			</song>
-		</songList>-->
+		</songList>
 	</album>
 </albumList>

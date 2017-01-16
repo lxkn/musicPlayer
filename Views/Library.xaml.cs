@@ -73,8 +73,8 @@ namespace mPlayer.Views
                     title = (string)e.Element("title"),
                     author = (string)e.Element("author"),
                     year = (string)e.Element("year"),
-                    label = (string)e.Element("label")
-                    /*songList = (
+                    label = (string)e.Element("label"),
+                    songList = (
                        from o in e.Elements("songList").Elements("song")
                        select new Song
                        {
@@ -84,7 +84,7 @@ namespace mPlayer.Views
                            album = (string)o.Element("album"),
                            number = (int)o.Element("number"),
                            year = (int)o.Element("year")
-                       }).ToList()*/
+                       }).ToList()
                 }).ToList();
             return albumList;
         }
