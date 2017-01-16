@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace mPlayer.Classes
 {
-    class Song
+    public class Song
     {
+        public int length { get; set; }
+        public string title { get; set; }
+        public string artist { get; set; }
+        public string album { get; set; }
+        public int number { get; set; }
+        public int year { get; set; }
     }
 }

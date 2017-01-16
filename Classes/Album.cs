@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace mPlayer.Classes
 {
-    class Album
+    public class Album
     {
         public String title { get; set; }
         public String author { get; set; }
@@ -13,12 +13,16 @@ namespace mPlayer.Classes
         public String label { get; set; }
         public List<Song> songList { get; set;}
 
-        public Album(String title, String author, String year, String label)
+        /*public Album(String title, String author, String year, String label)
         {
             this.title = title;
             this.author = author;
             this.year = year;
             this.label = label;
         }
+        public Album()
+        {
+
+        }*/
     }
 }

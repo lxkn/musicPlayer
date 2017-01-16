@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace mPlayer.Classes
 {
+    //Przypisywanie drugiego rodzaju ścieżek
     class SecondButtonsBuilder : ButtonI
     {
         public override void buildNextButton()
