@@ -51,31 +51,31 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
+    <ApplicationDefinition Include="Views\App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Class\Album.cs" />
-    <Compile Include="App.xaml.cs">
+    <Compile Include="Classes\Album.cs" />
+    <Compile Include="Views\App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Class\Button.cs" />
-    <Compile Include="Class\ButtonsPanel.cs" />
-    <Compile Include="Class\FirstButtonsBuilder.cs" />
-    <Compile Include="Class\PausedState.cs" />
-    <Compile Include="Class\PlayingState.cs" />
-    <Compile Include="Class\PlayState.cs" />
-    <Compile Include="Class\SecondButtonsBuilder.cs" />
-    <Compile Include="Class\Song.cs" />
-    <Compile Include="Class\StoppedState.cs" />
+    <Compile Include="Classes\ButtonI.cs" />
+    <Compile Include="Classes\ButtonsPanel.cs" />
+    <Compile Include="Classes\FirstButtonsBuilder.cs" />
+    <Compile Include="Classes\PausedState.cs" />
+    <Compile Include="Classes\PlayingState.cs" />
+    <Compile Include="Classes\PlayState.cs" />
+    <Compile Include="Classes\SecondButtonsBuilder.cs" />
+    <Compile Include="Classes\Song.cs" />
+    <Compile Include="Classes\StoppedState.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library.xaml.cs">
+    <Compile Include="Views\Library.xaml.cs">
       <DependentUpon>Library.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MusicPlayer.xaml.cs">
-      <DependentUpon>MusicPlayer.xaml</DependentUpon>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -104,11 +104,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Library.xaml">
+    <Page Include="Views\Library.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MusicPlayer.xaml">
+    <Page Include="MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

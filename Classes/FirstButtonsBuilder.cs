@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace mPlayer.Class
+namespace mPlayer.Classes
 {
-    class FirstButtonsBuilder : Button
+    class FirstButtonsBuilder : ButtonI
     {
         public override void buildNextButton()
         {
