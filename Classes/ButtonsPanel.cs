@@ -8,37 +8,38 @@ namespace mPlayer.Classes
 {
     public class ButtonsPanel
     {
+        string playPath, stopPath, pausePath, nextPath, previousPath, shufflePath, repeatPath;
         public ButtonsPanel()
         {
 
         }
-        public void setPlayButton()
+        public void setPlayButton(string playpath)
         {
-
+            this.playPath = playpath;
         }
-        public void setStopButton()
+        public void setStopButton(string stoppath)
         {
-
+            this.stopPath = stoppath;
         }
-        public void setPauseButton()
+        public void setPauseButton(string pausepath)
         {
-
+            this.pausePath = pausepath;
         }
-        public void setNextButton()
+        public void setNextButton(string nextpath)
         {
-
+            this.nextPath = nextpath;
         }
-        public void setPreviousButton()
+        public void setPreviousButton(string previouspath)
         {
-
+            this.previousPath = previouspath;
         }
-        public void setShuffleButton()
+        public void setShuffleButton(string shufflepath)
         {
-
+            this.shufflePath = shufflepath;
         }
-        public void setRepeatButton()
+        public void setRepeatButton(string repeatpath)
         {
-
+            this.repeatPath = repeatpath;
         }
     }
 }

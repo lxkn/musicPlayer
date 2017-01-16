@@ -25,36 +25,44 @@ namespace mPlayer
     {
         //obecny stan odtwarzacza
         private PlayState current_state;
-
-        private ButtonI buttonsBuild;
-        public ButtonI Build
-        {
-            get { return buttonsBuild; }
-            set { buttonsBuild = value; }
-        }
-
-        public void getPanel()
-        {
-
-        }
-        public void createButtons()
-        {
-
-        }
+        //Director
+        ButtonCreater mainCreate = new ButtonCreater();
+        //Builder FirstButtonsBuilder
+        ButtonI builder = new FirstButtonsBuilder();
+        
 
         public MainWindow()
         {
             InitializeComponent();
+
+            mainCreate.Builder = builder;
+            mainCreate.createButtons();
+            ButtonsPanel bPanelFirst = mainCreate.getPanel();
             // stan poczatkowy to Stopped
             current_state = new StoppedState();
+            //Tworzenie Singleton Pattern - Library
             Library lb = Library.Instance;
             lb.Show();
+            //Podpinanie buttonów do obrazka
             InitBinding();   
+
         }
         private void InitBinding()
         {
+            
+            imageButton.Source = setImg("volume.png");
+            imageButton1.Source = setImg("volume.png");
+            imageButton2.Source = setImg("volume.png");
+            imageButton3.Source = setImg("volume.png");
+            imageButton4.Source = setImg("volume.png");
+            imageButton5.Source = setImg("volume.png");
+
+        }
+        //Ustawianie path do Obrazka
+        private BitmapImage setImg(string path)
+        {
             var source = new BitmapImage();
-            using (var stream = new FileStream("volume.png", FileMode.Open))
+            using (var stream = new FileStream(path, FileMode.Open))
             {
                 source.BeginInit();
                 source.CacheOption = BitmapCacheOption.OnLoad;
@@ -62,7 +70,8 @@ namespace mPlayer
                 source.EndInit();
                 source.Freeze();
             }
-            imageButton.Source = source;
+            return source;
+
         }
         
 

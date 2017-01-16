@@ -42,15 +42,6 @@ namespace mPlayer.Classes
         {
             throw new NotImplementedException();
         }
-
-        public override ButtonsPanel getPanel()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void newPanel()
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

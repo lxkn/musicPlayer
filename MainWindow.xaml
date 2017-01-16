@@ -6,6 +6,41 @@
         xmlns:local="clr-namespace:mPlayer"
         mc:Ignorable="d"
         Title="MusicPlayer" Height="500" Width="780">
+    <Window.Resources>
+        <Style TargetType="Button" x:Key="GellButton">
+            <Setter Property="Background" Value="#373737" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontSize" Value="15" />
+            <Setter Property="FontFamily" Value="./#Segoe UI" />
+            <Setter Property="SnapsToDevicePixels" Value="True" />
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border CornerRadius="1" Background="{TemplateBinding Background}">
+                            <Grid>
+                                <Path x:Name="PathIcon" Width="15" Height="25" Fill="#4C87B3" HorizontalAlignment="Left" Margin="17,0,0,0" Data="F1 M 30.0833,22.1667L 50.6665,37.6043L 50.6665,38.7918L 30.0833,53.8333L 30.0833,22.1667 Z "/>
+                                <ContentPresenter x:Name="MyContentPresenter" Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" />
+                            </Grid>
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#E59400" />
+                                <Setter Property="Foreground" Value="White" />
+                                <Setter TargetName="PathIcon" Property="Fill" Value="Black" />
+                            </Trigger>
+
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="OrangeRed" />
+                                <Setter Property="Foreground" Value="White" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" />
@@ -43,13 +78,17 @@
         </Grid.RowDefinitions>
         <Button x:Name="button" Grid.ColumnSpan="2" Content="Test_Play" Grid.Column="2" HorizontalAlignment="Left" Margin="6,6,0,0" Grid.Row="4" VerticalAlignment="Top" Width="75" Click="play_click"/>
         <Button x:Name="button1" Grid.ColumnSpan="2" Content="TestStop" Grid.Column="4" HorizontalAlignment="Left" Margin="10,7,0,0" Grid.Row="4" VerticalAlignment="Top" Width="75" Click="stop_click"/>
-        <Button x:Name="eloszka"  Grid.ColumnSpan="3" Grid.Row="2" Grid.Column="2" Margin="6,29,36,10" Grid.RowSpan="2">
-            <Button.Template>
-                <ControlTemplate>
-                    <Image x:Name="imageButton" Grid.ColumnSpan="3" Grid.Row="2" Grid.Column="4" Source="{Binding ImagePath}"/>
-                </ControlTemplate>
-            </Button.Template>
+        <Button x:Name="eloszka" Style="{StaticResource GellButton}"  Background="Transparent" Grid.ColumnSpan="1" Grid.Row="2" Grid.Column="2" Margin="6,29,36,10" Grid.RowSpan="2">
+            <Image x:Name="imageButton" Height="25" Width="25" Grid.ColumnSpan="1" Grid.Row="2" Grid.Column="4" Source="{Binding ImagePath}"/>
+           
         </Button>
-        
+        <Button x:Name="e2" Style="{StaticResource GellButton}" Background="Transparent" Grid.ColumnSpan="1" Grid.Row="2" Grid.Column="3" Grid.RowSpan="2" >
+            <Image x:Name="imageButton1" Height="25" Width="25" Grid.ColumnSpan="1" Grid.Row="2" Grid.Column="5" Source="{Binding ImagePath1}"/>
+        </Button>
+        <Image x:Name="imageButton2" Height="25" Width="25" Grid.ColumnSpan="1" Grid.Row="2" Grid.Column="6" Source="{Binding ImagePath2}"/>
+        <Image x:Name="imageButton3" Height="25" Width="25" Grid.ColumnSpan="1" Grid.Row="2" Grid.Column="7" Source="{Binding ImagePath3}"/>
+        <Image x:Name="imageButton4" Height="25" Width="25" Grid.ColumnSpan="1" Grid.Row="2" Grid.Column="8" Source="{Binding ImagePath4}"/>
+        <Image x:Name="imageButton5" Height="25" Width="25" Grid.ColumnSpan="1" Grid.Row="2" Grid.Column="9" Source="{Binding ImagePath5}"/>
     </Grid>
+    
 </Window>

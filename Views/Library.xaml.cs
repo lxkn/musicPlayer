@@ -22,6 +22,7 @@ namespace mPlayer.Views
     /// </summary>
     public partial class Library : Window
     {
+        //instance wykorzystywany w Singletonie
         private static Library singletonInstance;
         private List<Album> albumList;
         
@@ -37,7 +38,8 @@ namespace mPlayer.Views
         public static Library Instance
         {
             get
-            {
+            {   
+                // Jeżeli nie ma obiektu, stwórz
                 if(singletonInstance == null)
                 {
                     singletonInstance = new Library();
