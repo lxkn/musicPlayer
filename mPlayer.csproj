@@ -60,7 +60,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="PlayingState.cs" />
+    <Compile Include="PlayState.cs" />
     <Compile Include="Song.cs" />
+    <Compile Include="StoppedState.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Library.xaml.cs">
