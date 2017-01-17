@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 //using mPlayer.Views;
 namespace mPlayer.Classes
 {
-    class StoppedState : PlayState, IPlayer
+    class StoppedState : PlayState
     {
-        
+
         public override void nextSong(MainWindow context)
         {
             Console.WriteLine("Nastepna piosenka - stan bez zmian");
@@ -19,10 +19,12 @@ namespace mPlayer.Classes
             Console.WriteLine("Zatrzymanie piosenki na stooped -stan bez zmian");
         }
 
-        
-        public override void playSong(MainWindow context, string path)
+
+        public override void playSong(MainWindow context)
         {
-            playmusic(path);
+            Console.WriteLine("Stan stopped - play");
+            context.mp3player.URL = context.songPath;
+            context.mp3player.controls.play();
             base.setState(context, new PlayingState());
         }
 
@@ -31,9 +33,11 @@ namespace mPlayer.Classes
             Console.WriteLine("Poprzednia piosenka - stan bez zmian");
         }
 
-        public override void stopSong(MainWindow context,string path)
+        public override void stopSong(MainWindow context)
         {
-            Console.WriteLine("Piosenka jest nieodtwarzana nic sie nie dzieje");
+            Console.WriteLine("Stop song - stan stopped");
+            // stopmusic(path);
+
         }
     }
 }
