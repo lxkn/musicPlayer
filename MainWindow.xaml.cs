@@ -57,6 +57,8 @@ namespace mPlayer
             //Tworzenie Singleton Pattern - Library
             Library lb = Library.Instance;
             //Podpinanie buttonów do obrazka
+
+            //Ustawianie interwału
             dtClockTime.Interval = new TimeSpan(0, 0, 1); //in Hour, Minutes, Second.
             InitBinding(bPanelFirst);
 
@@ -208,7 +210,12 @@ namespace mPlayer
         }
         private void onListViewDoubleClick(object sender, RoutedEventArgs e)
         {
+            current_state.playSong(this);
 
+
+            dtClockTime.Tick += dtClockTime_Tick;
+
+            dtClockTime.Start();
         }
 
     }
