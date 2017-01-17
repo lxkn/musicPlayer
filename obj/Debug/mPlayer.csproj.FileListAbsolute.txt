@@ -13,14 +13,12 @@ D:\musicPlayer\bin\Debug\mPlayer.exe.config
 D:\musicPlayer\obj\Debug\mPlayer.exe
 D:\musicPlayer\obj\Debug\mPlayer.pdb
 D:\musicPlayer\obj\Debug\mPlayer.csprojResolveAssemblyReference.cache
-D:\musicPlayer\obj\Debug\Library.g.cs
 D:\musicPlayer\obj\Debug\MainWindow.g.cs
 D:\musicPlayer\obj\Debug\App.g.cs
 D:\musicPlayer\obj\Debug\mPlayer_MarkupCompile.cache
 D:\musicPlayer\obj\Debug\mPlayer_MarkupCompile.lref
 D:\musicPlayer\bin\Debug\mPlayer.exe
 D:\musicPlayer\bin\Debug\mPlayer.pdb
-D:\musicPlayer\obj\Debug\Library.baml
 D:\musicPlayer\obj\Debug\MainWindow.baml
 D:\musicPlayer\obj\Debug\mPlayer.g.resources
 D:\musicPlayer\obj\Debug\mPlayer.Properties.Resources.resources
@@ -68,3 +66,6 @@ C:\Users\lxkn\Documents\Visual Studio 2015\Projects\mPlayer\mPlayer\obj\Debug\In
 C:\Users\lxkn\Documents\Visual Studio 2015\Projects\mPlayer\mPlayer\obj\Debug\mPlayer.csproj.ResolveComReference.cache
 C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\App.g.cs
 C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\App.baml
+D:\musicPlayer\obj\Debug\Interop.WMPLib.dll
+D:\musicPlayer\obj\Debug\mPlayer.csproj.ResolveComReference.cache
+D:\musicPlayer\obj\Debug\App.baml
