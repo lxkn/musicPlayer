@@ -210,11 +210,9 @@ namespace mPlayer
         }
         private void onListViewDoubleClick(object sender, RoutedEventArgs e)
         {
+            current_state.stopSong(this);
             current_state.playSong(this);
-
-
             dtClockTime.Tick += dtClockTime_Tick;
-
             dtClockTime.Start();
         }
 
