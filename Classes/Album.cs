@@ -12,6 +12,7 @@ namespace mPlayer.Classes
         public String year { get; set; }
         public String label { get; set; }
         public List<Song> songList { get; set;}
+        public String dir { get; set; }
 
         public Album(String title, String author, String year, String label)
         {

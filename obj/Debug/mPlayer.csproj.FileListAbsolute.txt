@@ -66,6 +66,11 @@ C:\Users\lxkn\Documents\Visual Studio 2015\Projects\mPlayer\mPlayer\obj\Debug\In
 C:\Users\lxkn\Documents\Visual Studio 2015\Projects\mPlayer\mPlayer\obj\Debug\mPlayer.csproj.ResolveComReference.cache
 C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\App.g.cs
 C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\App.baml
+<<<<<<< HEAD
+C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\AlbumInfo.g.cs
+C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\AlbumInfo.baml
+=======
 D:\musicPlayer\obj\Debug\Interop.WMPLib.dll
 D:\musicPlayer\obj\Debug\mPlayer.csproj.ResolveComReference.cache
 D:\musicPlayer\obj\Debug\App.baml
+>>>>>>> refs/remotes/origin/master

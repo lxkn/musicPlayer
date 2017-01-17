@@ -1,0 +1,57 @@
+﻿<Window x:Class="mPlayer.AlbumInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:mPlayer"
+        mc:Ignorable="d"
+        Title="AlbumInfo" Height="400" Width="470">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <ListView x:Name="songListView" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="8" Grid.RowSpan="18">
+            <ListView.View>
+                <GridView AllowsColumnReorder="True">
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=number}" Header="Number"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=fileName}" Header="File name"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=length}" Header="Length"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=artist}" Header="Autor"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=title}" Header="Album"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=artist}" Header="Artist"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+            <ListView.Resources>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Foreground" Value="Black"/>
+                </Style>
+            </ListView.Resources>
+        </ListView>
+    </Grid>
+</Window>

@@ -74,19 +74,22 @@ namespace mPlayer
 
         private void InitBinding(ButtonsPanel bp)
         {
-            songList = new List<Song>();
+            /*songList = new List<Song>();
             songList.Add(new Song(350,"Title","Artist","Album",1998,1, "C:\\Users\\lxkn\\Desktop\\Solar & Białas\\Solar & Białas - #nowanormalnosc\\Solar & Białas - #znasznasprzezto ft. DJ Flip.mp3", "Solar & Białas - #znasznasprzezto.mp3"));
             songList.Add(new Song(350, "Title1", "Artist1", "Album1", 1998, 1, "C:\\Users\\lxkn\\Desktop\\Solar & Białas\\Solar & Białas - #nowanormalnosc\\Solar & Białas - A do Z.mp3", "Solar & Białas - A do Z.mp3"));
-            playListView.ItemsSource = songList;
+            */
+            
             playListView.SelectedItem = playListView.SelectedIndex + 1;
             index = 0;
             //this.UpdateDefaultStyle();
-            
-            foreach (Song s in songList)
+            if (songList != null)
             {
-                currentSong.Text = s.fileName;
-                currentSec.Text = s.length.ToString();
-                maxSec.Text = s.length.ToString();
+                foreach (Song s in songList)
+                {
+                    currentSong.Text = s.fileName;
+                    currentSec.Text = s.length.ToString();
+                    maxSec.Text = s.length.ToString();
+                }
             }
 
             //buttonIMAGE podpinamy pod Source
@@ -98,12 +101,9 @@ namespace mPlayer
             shuffleImage.Source = setImg(bp.shufflePath);*/
             albumList = new List<Album>();
             albumList = loadXml(albumList);
-            foreach (Album a in albumList)
-            {
-                Console.Write(a.author);
-            }
             //Podpianie ItemsSource do albumList
             libraryListView.ItemsSource = albumList;
+             
             /* imageButton2.Source = setImg(bp.playPath);
              imageButton3.Source = setImg(bp.playPath);
              imageButton4.Source = setImg(bp.playPath);
@@ -137,7 +137,9 @@ namespace mPlayer
                            artist = (string)o.Element("artist"),
                            album = (string)o.Element("album"),
                            number = (int)o.Element("number"),
-                           year = (int)o.Element("year")
+                           year = (int)o.Element("year"),
+                           path = (string)o.Element("path"),
+                           fileName = (string)o.Element("fileName")
                        }).ToList()
                 }).ToList();
             return albumList;
@@ -208,6 +210,20 @@ namespace mPlayer
             songPath =  (playListView.SelectedItem as Song).path;
                currentSongTime = (playListView.SelectedItem as Song).length;
         }
+
+
+        private void libraryListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            AlbumInfo albumInfo = new AlbumInfo(songList);
+            albumInfo.Show();
+            playListView.ItemsSource=(libraryListView.SelectedItem as Album).songList;
+           /* foreach (Album a in albumList)
+            {
+                songList = a.songList;
+            }*/
+            //playListView.ItemsSource
+        }
+
         private void onListViewDoubleClick(object sender, RoutedEventArgs e)
         {
             current_state.stopSong(this);
@@ -215,6 +231,7 @@ namespace mPlayer
             dtClockTime.Tick += dtClockTime_Tick;
             dtClockTime.Start();
         }
+
 
     }
 
