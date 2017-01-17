@@ -6,41 +6,7 @@
         xmlns:local="clr-namespace:mPlayer"
         mc:Ignorable="d"
         Title="MusicPlayer" Height="500" Width="780" Loaded="onWindowLoad" >
-    <Window.Resources>
-        <Style TargetType="Button" x:Key="GellButton">
-            <Setter Property="Background" Value="#373737" />
-            <Setter Property="Foreground" Value="White" />
-            <Setter Property="FontSize" Value="15" />
-            <Setter Property="FontFamily" Value="./#Segoe UI" />
-            <Setter Property="SnapsToDevicePixels" Value="True" />
-
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Border CornerRadius="1" Background="{TemplateBinding Background}">
-                            <Grid>
-                                <Path x:Name="PathIcon" Width="15" Height="25" Fill="#4C87B3" HorizontalAlignment="Left" Margin="17,0,0,0" Data="F1 M 30.0833,22.1667L 50.6665,37.6043L 50.6665,38.7918L 30.0833,53.8333L 30.0833,22.1667 Z "/>
-                                <ContentPresenter x:Name="MyContentPresenter" Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" />
-                            </Grid>
-                        </Border>
-
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#E59400" />
-                                <Setter Property="Foreground" Value="White" />
-                                <Setter TargetName="PathIcon" Property="Fill" Value="White" />
-                            </Trigger>
-
-                            <Trigger Property="IsPressed" Value="True">
-                                <Setter Property="Background" Value="OrangeRed" />
-                                <Setter Property="Foreground" Value="White" />
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-    </Window.Resources>
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -103,8 +69,8 @@
             <!--<Image x:Name="shuffleImage" Height="25" Width="25" Source="{Binding ImagePath1}"/>-->
         </Button>
         <Button x:Name="saveButton" Content="Save playlist" Background="Transparent" Foreground="Orange" Grid.Row="11" Grid.ColumnSpan="5" Margin="0,0,42.778,0"/>
-        <Slider x:Name="volume" Maximum="100" Grid.ColumnSpan="5" Grid.Row="0" Grid.Column="13" Margin="0.444,0,41.444,0"/>
-        <Slider x:Name="timeline" Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="10"/>
+        <Slider x:Name="volume" Style="{StaticResource Horizontal_Slider}" Maximum="100" Grid.ColumnSpan="5" Grid.Row="0" Grid.Column="13" Margin="0.444,0,41.444,0"/>
+        <Slider x:Name="timeline" Style="{StaticResource Horizontal_Slider}" Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="10"/>
         <TextBlock x:Name="songTime" Foreground="White" Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="3"/>
         <ListView x:Name="playListView" Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="11" Grid.RowSpan="7" Margin="0,0,42.667,0" SelectionChanged="playListView_SelectionChanged">
             <ListView.View>

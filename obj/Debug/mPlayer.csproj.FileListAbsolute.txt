@@ -25,7 +25,6 @@ D:\musicPlayer\obj\Debug\MainWindow.baml
 D:\musicPlayer\obj\Debug\mPlayer.g.resources
 D:\musicPlayer\obj\Debug\mPlayer.Properties.Resources.resources
 D:\musicPlayer\obj\Debug\mPlayer.csproj.GenerateResource.Cache
-C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\Views\App.g.cs
 C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\MainWindow.g.cs
 C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\MainWindow.baml
 C:\Users\User\Desktop\mplayer\musicplayer\bin\Debug\mPlayer.exe.config
@@ -67,3 +66,5 @@ C:\Users\Mateusz\Desktop\ztp p\musicplayer\obj\Debug\mPlayer.Properties.Resource
 C:\Users\Mateusz\Desktop\ztp p\musicplayer\obj\Debug\mPlayer.csproj.GenerateResource.Cache
 C:\Users\lxkn\Documents\Visual Studio 2015\Projects\mPlayer\mPlayer\obj\Debug\Interop.WMPLib.dll
 C:\Users\lxkn\Documents\Visual Studio 2015\Projects\mPlayer\mPlayer\obj\Debug\mPlayer.csproj.ResolveComReference.cache
+C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\App.g.cs
+C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\App.baml
