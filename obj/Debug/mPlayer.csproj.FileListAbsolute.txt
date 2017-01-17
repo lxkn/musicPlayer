@@ -69,3 +69,4 @@ C:\Users\lxkn\Documents\Visual Studio 2015\Projects\mPlayer\mPlayer\obj\Debug\mP
 C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\App.g.cs
 C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\App.baml
 C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\AlbumInfo.g.cs
+C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\AlbumInfo.baml

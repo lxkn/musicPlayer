@@ -7,28 +7,35 @@
 		<label>Label</label>
 		<songList>
 			<song>
-				<length>315</length>
-				<title>Tytulek</title>
-				<artist>Peja</artist>
-				<album>StylZyciaGnoja</album>
+				<length>195</length>
+				<title>#znasznasprzezto</title>
+				<artist>SolarBialas</artist>
+				<album>#nowanormalnosc</album>
 				<number>1</number>
-				<year>1995</year>
+				<year>2016</year>
+				<path>C:\Users\lxkn\Desktop\Paluch - Ostatni Krzyk Osiedla (2016)\Paluch - Ostatni Krzyk Osiedla\\Paluch - 24H.mp3</path>
+				<fileName>Paluch - 24H.mp3</fileName>
 			</song>
 			<song>
-				<length>315</length>
-				<title>Tytulek</title>
-				<artist>Peja</artist>
-				<album>StylZyciaGnoja</album>
-				<number>2</number>
-				<year>1995</year>
+				<length>195</length>
+				<title>#znasznasprzezto</title>
+				<artist>SolarBialas</artist>
+				<album>#nowanormalnosc</album>
+				<number>1</number>
+				<year>2016</year>
+				<path>C:\Users\lxkn\Desktop\Paluch - Ostatni Krzyk Osiedla (2016)\Paluch - Ostatni Krzyk Osiedla\\Paluch - 24H.mp3</path>
+				<fileName>Paluch - 24H.mp3</fileName>
+
 			</song>
 			<song>
-				<length>315</length>
-				<title>Tytulek</title>
-				<artist>Peja</artist>
-				<album>StylZyciaGnoja</album>
-				<number>3</number>
-				<year>1995</year>
+				<length>195</length>
+				<title>#znasznasprzezto</title>
+				<artist>SolarBialas</artist>
+				<album>#nowanormalnosc</album>
+				<number>1</number>
+				<year>2016</year>
+				<path>C:\Users\lxkn\Desktop\Paluch - Ostatni Krzyk Osiedla (2016)\Paluch - Ostatni Krzyk Osiedla\\Paluch - 24H.mp3</path>
+				<fileName>Paluch - 24H.mp3</fileName>
 			</song>
 		</songList>
 	</album>

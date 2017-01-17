@@ -5,20 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:mPlayer"
         mc:Ignorable="d"
-        Title="AlbumInfo" Height="400" Width="300">
+        Title="AlbumInfo" Height="400" Width="470">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition />
-            <ColumnDefinition />
-            <ColumnDefinition />
-            <ColumnDefinition />
-            <ColumnDefinition />
-            <ColumnDefinition />
-            <ColumnDefinition />
-            <ColumnDefinition />
-            <ColumnDefinition />
-            <ColumnDefinition />
             <ColumnDefinition />
             <ColumnDefinition />
             <ColumnDefinition />
@@ -47,7 +36,7 @@
             <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
-        <ListView x:Name="songListView" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="18" Grid.RowSpan="18">
+        <ListView x:Name="songListView" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="8" Grid.RowSpan="18">
             <ListView.View>
                 <GridView AllowsColumnReorder="True">
                     <GridViewColumn DisplayMemberBinding="{Binding Path=number}" Header="Number"></GridViewColumn>

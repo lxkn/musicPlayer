@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using mPlayer.Classes;
 namespace mPlayer
 {
     /// <summary>
@@ -19,9 +19,18 @@ namespace mPlayer
     /// </summary>
     public partial class AlbumInfo : Window
     {
-        public AlbumInfo()
+        List<Song> songList;
+        public AlbumInfo(List<Song>songList)
         {
+            this.songList = songList;
             InitializeComponent();
+            InitBinding();
         }
+        private void InitBinding()
+        {
+            songListView.ItemsSource = songList;
+        }
+
+
     }
 }

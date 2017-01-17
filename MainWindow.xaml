@@ -89,7 +89,7 @@
                 </Style>
             </ListView.Resources>
         </ListView>
-        <ListView x:Name="libraryListView" Grid.Column="10" Grid.Row="6" Grid.ColumnSpan="8" Grid.RowSpan="7" Margin="0.333,0,-1.556,0" MouseDoubleClick="onlibraryDoubleClick" SelectionChanged="libraryListView_SelectionChanged">
+        <ListView x:Name="libraryListView" Grid.Column="10" Grid.Row="6" Grid.ColumnSpan="8" Grid.RowSpan="7" Margin="0.333,0,-1.556,0" MouseDoubleClick="libraryListView_MouseDoubleClick" >
             <ListView.View >
                     <GridView AllowsColumnReorder="True" >
                         <GridViewColumn DisplayMemberBinding="{Binding Path=title}" Header="Album"></GridViewColumn>
