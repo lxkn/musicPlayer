@@ -75,34 +75,37 @@
             <RowDefinition Height="1*" />
             <RowDefinition Height="1*" />
             <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
-        <Image Source="C:\Users\lxkn\Documents\Visual Studio 2015\Projects\mPlayer\mPlayer\bin\Debug\upper.png" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="20" Stretch="Fill" Grid.RowSpan="4"/>
-        <Image Source="C:\Users\lxkn\Documents\Visual Studio 2015\Projects\mPlayer\mPlayer\bin\Debug\upper.png" Grid.Column="0" Grid.Row="11" Grid.ColumnSpan="20" Stretch="Fill" Grid.RowSpan="4"/>
-        <TextBlock x:Name="currentSong" Foreground="White" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="5" />
-        <TextBlock x:Name="currentSec" Foreground="White"  Grid.Column="3" Grid.ColumnSpan="1" Grid.Row="2"/>
-        <TextBlock x:Name="maxSec" Foreground="White" Grid.Column="4" Grid.ColumnSpan="1" Grid.Row="2"/>
-        <Button x:Name="playButton" Content="p" Foreground="White" Background="Transparent" Grid.ColumnSpan="1" Grid.Row="3" Grid.Column="3"  Click="play_click" >
+        <Image Source="C:\Users\lxkn\Documents\Visual Studio 2015\Projects\mPlayer\mPlayer\bin\Debug\upper.png" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="20" Stretch="Fill" Grid.RowSpan="6"/>
+        <Image Source="C:\Users\lxkn\Documents\Visual Studio 2015\Projects\mPlayer\mPlayer\bin\Debug\upper.png" Grid.Column="0" Grid.Row="12" Grid.ColumnSpan="20" Stretch="Fill" Grid.RowSpan="4"/>
+        <TextBlock x:Name="currentSong" Margin="0 10 0 0" Foreground="White" Grid.Column="3" Grid.Row="2" Grid.ColumnSpan="5" />
+        <Slider x:Name="timeMovingSlider" Grid.Column="3" Grid.Row="3" Grid.ColumnSpan="10" />
+        <TextBlock x:Name="currentSec"  Foreground="White"  Grid.Column="3" Grid.ColumnSpan="1" Grid.Row="4"/>
+        <TextBlock x:Name="maxSec"  Foreground="White" Grid.Column="4" Grid.ColumnSpan="1" Grid.Row="4"/>
+        <Button x:Name="playButton" Content="p" Foreground="White" Background="Transparent" Grid.ColumnSpan="1" Grid.Row="5" Grid.Column="3"  Click="play_click" >
             <!--="{StaticResource GellButton}" DODAC DO BUTTONÓW!!!-->
             <!--<Image x:Name="playImage" Stretch="Fill" Source="{Binding ImagePath}"/>-->
         </Button>
-        <Button x:Name="stopButton" Content="s" Foreground="White" Background="Transparent" Grid.ColumnSpan="1" Grid.Row="3" Grid.Column="4" Click="stop_click" >
+        <Button x:Name="stopButton" Content="s" Foreground="White" Background="Transparent" Grid.ColumnSpan="1" Grid.Row="5" Grid.Column="4" Click="stop_click" >
             <!--<Image x:Name="stopImage" Height="25" Width="25" Source="{Binding ImagePath1}"/>-->
         </Button>
-        <Button x:Name="previousButton" Content="Pr" Foreground="White" Background="Transparent" Grid.ColumnSpan="1" Grid.Row="3" Grid.Column="5">
+        <Button x:Name="previousButton" Content="Pr" Foreground="White" Background="Transparent" Grid.ColumnSpan="1" Grid.Row="5" Grid.Column="5">
             <!--<Image x:Name="previousImage" Height="25" Width="25" Source="{Binding ImagePath1}"/>-->
         </Button>
-        <Button x:Name="nextButton" Content="Ne" Foreground="White" Background="Transparent" Grid.ColumnSpan="1" Grid.Row="3" Grid.Column="6" >
+        <Button x:Name="nextButton" Content="Ne" Foreground="White" Background="Transparent" Grid.ColumnSpan="1" Grid.Row="5" Grid.Column="6" >
             <!--<Image x:Name="nextImage" Height="25" Width="25" Source="{Binding ImagePath1}"/>-->
         </Button>
-        <Button x:Name="repeatButton" Content="Rep" Foreground="White" Background="Transparent" Grid.ColumnSpan="1" Grid.Row="3" Grid.Column="7" >
+        <Button x:Name="repeatButton" Content="Rep" Foreground="White" Background="Transparent" Grid.ColumnSpan="1" Grid.Row="5" Grid.Column="7" >
             <!--<Image x:Name="repeatImage" Height="25" Width="25" Source="{Binding ImagePath1}"/>-->
         </Button>
-        <Button x:Name="shuffleButton" Content="Sh" Foreground="White" Background="Transparent" Grid.ColumnSpan="1" Grid.Row="3" Grid.Column="8" >
+        <Button x:Name="shuffleButton" Content="Sh" Foreground="White" Background="Transparent" Grid.ColumnSpan="1" Grid.Row="5" Grid.Column="8" >
             <!--<Image x:Name="shuffleImage" Height="25" Width="25" Source="{Binding ImagePath1}"/>-->
         </Button>
         <Button x:Name="saveButton" Content="Save playlist" Background="Transparent" Foreground="Orange" Grid.Row="11" Grid.ColumnSpan="4"/>
-        <Slider x:Name="volume" Maximum="100" Grid.ColumnSpan="4" Grid.Row="3" Grid.Column="13"/>
-        <ListView x:Name="playListView" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="10" Grid.RowSpan="7">
+        <Slider x:Name="volume" Maximum="100" Grid.ColumnSpan="4" Grid.Row="1" Grid.Column="13"/>
+        <ListView x:Name="playListView" Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="10" Grid.RowSpan="7">
             <ListView.View>
                 <GridView AllowsColumnReorder="True">
                     <GridViewColumn DisplayMemberBinding="{Binding Path=number}" Header="Number"></GridViewColumn>
@@ -120,7 +123,7 @@
             </ListView.Resources>
         </ListView>
         
-        <ListView x:Name="libraryListView" Grid.Column="10" Grid.Row="4" Grid.ColumnSpan="8" Grid.RowSpan="7">
+        <ListView x:Name="libraryListView" Grid.Column="10" Grid.Row="6" Grid.ColumnSpan="8" Grid.RowSpan="7">
             <ListView.View>
                 <GridView AllowsColumnReorder="True">
                     <GridViewColumn DisplayMemberBinding="{Binding Path=title}" Header="Album"></GridViewColumn>
