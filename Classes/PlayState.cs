@@ -29,7 +29,7 @@ namespace mPlayer.Classes
             }
 
 
-            else if (type.Equals(".mp3", StringComparison.InvariantCultureIgnoreCase))
+            else if (type.Equals(".wav", StringComparison.InvariantCultureIgnoreCase))
             {
                 playAdapter = new playAdapter(songpath);
                 playAdapter.play(songpath);
@@ -55,7 +55,7 @@ namespace mPlayer.Classes
             }
 
 
-            else if (type.Equals(".mp3", StringComparison.InvariantCultureIgnoreCase))
+            else if (type.Equals(".wav", StringComparison.InvariantCultureIgnoreCase))
             {
                 playAdapter = new playAdapter(songpath);
                 playAdapter.stop(songpath);
