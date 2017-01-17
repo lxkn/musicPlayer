@@ -4,35 +4,17 @@
 winexe
 C#
 .cs
-<<<<<<< HEAD
-C:\Users\Mateusz\Desktop\ztp p\musicPlayer\obj\Debug\
-=======
-D:\musicPlayer\obj\Debug\
->>>>>>> origin/master
+C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\
 mPlayer
 none
 false
 DEBUG;TRACE
-<<<<<<< HEAD
 C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\App.xaml
 21528440058
 
 241144509244
-=======
-<<<<<<< HEAD
-C:\Users\Mateusz\Desktop\ztp p\musicPlayer\App.xaml
-11151548125
-
-27-214473841
-=======
-D:\musicPlayer\App.xaml
-11151548125
-
-232106104387
->>>>>>> origin/master
->>>>>>> refs/remotes/origin/master
 161380108440
 AlbumInfo.xaml;MainWindow.xaml;
 
-True
+False
 

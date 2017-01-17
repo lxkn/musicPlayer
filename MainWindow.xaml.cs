@@ -210,7 +210,7 @@ namespace mPlayer
             songPath =  (playListView.SelectedItem as Song).path;
                currentSongTime = (playListView.SelectedItem as Song).length;
         }
-<<<<<<< HEAD
+
 
         private void libraryListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
@@ -223,7 +223,7 @@ namespace mPlayer
             }*/
             //playListView.ItemsSource
         }
-=======
+
         private void onListViewDoubleClick(object sender, RoutedEventArgs e)
         {
             current_state.stopSong(this);
@@ -232,7 +232,7 @@ namespace mPlayer
             dtClockTime.Start();
         }
 
->>>>>>> refs/remotes/origin/master
+
     }
 
 }
