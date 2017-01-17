@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 //using mPlayer.Views;
 namespace mPlayer.Classes
 {
-    class StoppedState : PlayState
+    class StoppedState : PlayState, IPlayer
     {
+        
         public override void nextSong(MainWindow context)
         {
             Console.WriteLine("Nastepna piosenka - stan bez zmian");
@@ -18,9 +19,10 @@ namespace mPlayer.Classes
             Console.WriteLine("Zatrzymanie piosenki na stooped -stan bez zmian");
         }
 
+        
         public override void playSong(MainWindow context, string path)
         {
-            Console.WriteLine("Odtwarzacz zaczyna grac przechodzi w stan playingState");
+            playmusic(path);
             base.setState(context, new PlayingState());
         }
 

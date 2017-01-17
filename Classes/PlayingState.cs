@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 //using mPlayer.Views;
 namespace mPlayer.Classes
 {
-    class PlayingState : PlayState, IPlayer
+    class PlayingState : PlayState
     {
-        playAdapter playAdapter;
-        WMPLib.WindowsMediaPlayer mp3player;
+        
         public override void nextSong(MainWindow context)
         {
             Console.WriteLine("Nastepna piosenka - stan bez zmian");
@@ -20,38 +19,10 @@ namespace mPlayer.Classes
             Console.WriteLine("Zatrzymanie piosenki - zmiana stanu na pused");
             base.setState(context, new PausedState());
         }
-
-        public void playmusic(string songpath)
-        {
-
-
-            String type;
-            type = songpath.Substring(songpath.Length - 4);
-
-
-            if (type.Equals(".mp3", StringComparison.InvariantCultureIgnoreCase))
-            {
-                mp3player = new WMPLib.WindowsMediaPlayer();
-                mp3player.URL = songpath;
-                mp3player.controls.play();
-            }
-
-
-            else if (type.Equals(".mp3", StringComparison.InvariantCultureIgnoreCase))
-            {
-                playAdapter = new playAdapter(songpath);
-                playAdapter.play(songpath);
-            }
-
-            else
-            {
-                Console.WriteLine("Nieobslugiwany format pliku: " + type);
-            }
-        }
-
+        
         public override void playSong(MainWindow context,string path)
         {
-            playmusic(path);
+            //
         }
 
         public override void previousSong(MainWindow context)
