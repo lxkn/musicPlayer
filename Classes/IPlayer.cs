@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace mPlayer.Classes
 {
-    class Class1
+    public interface IPlayer
     {
+        void playmusic(String path);
+
     }
 }
