@@ -89,22 +89,23 @@
                 </Style>
             </ListView.Resources>
         </ListView>
-
-        <ListView x:Name="libraryListView" Grid.Column="10" Grid.Row="6" Grid.ColumnSpan="8" Grid.RowSpan="7" Margin="0.333,0,-1.556,0" >
+        <ListView x:Name="libraryListView" Grid.Column="10" Grid.Row="6" Grid.ColumnSpan="8" Grid.RowSpan="7" Margin="0.333,0,-1.556,0" MouseDoubleClick="onlibraryDoubleClick" SelectionChanged="libraryListView_SelectionChanged">
             <ListView.View >
-                <GridView AllowsColumnReorder="True" >
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=title}" Header="Album"></GridViewColumn>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=author}" Header="Autor"></GridViewColumn>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=year}" Header="Rok"></GridViewColumn>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=label}" Header="Label"></GridViewColumn>
-                </GridView>
-            </ListView.View>
-            <ListView.Resources>
+                    <GridView AllowsColumnReorder="True" >
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=title}" Header="Album"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=author}" Header="Autor"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=year}" Header="Rok"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=label}" Header="Label"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=songList}"/>
+                    </GridView>
+                </ListView.View>
+                <ListView.Resources>
                 <Style TargetType="{x:Type TextBlock}">
                     <Setter Property="Foreground" Value="Black"/>
                 </Style>
             </ListView.Resources>
         </ListView>
+
         <TextBlock x:Name="error" Foreground="White" HorizontalAlignment="Left" Margin="10,10,0,-8" Grid.Row="13" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Grid.ColumnSpan="15" Width="592"/>
     </Grid>
 
