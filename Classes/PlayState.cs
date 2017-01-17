@@ -42,8 +42,7 @@ namespace mPlayer.Classes
         }
         public void stopmusic(string songpath)
         {
-
-
+            
             String type;
             type = songpath.Substring(songpath.Length - 4);
 

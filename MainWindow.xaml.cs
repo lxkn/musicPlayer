@@ -16,6 +16,9 @@ using mPlayer.Classes;
 using System.IO;
 using System.Xml.Serialization;
 using System.Xml.Linq;
+using System.Windows.Threading;
+using System.Timers;
+using System.Threading;
 
 namespace mPlayer
 {
@@ -37,6 +40,10 @@ namespace mPlayer
         //ObservableC = ObservableCollection ();
         int index;
         string songPath;
+        //Song Timer
+        DispatcherTimer dtClockTime = new DispatcherTimer();
+        int time = 0;
+        int currentSongTime;
 
         public MainWindow()
         {
@@ -50,13 +57,23 @@ namespace mPlayer
             //Tworzenie Singleton Pattern - Library
             Library lb = Library.Instance;
             //Podpinanie buttonów do obrazka
+            dtClockTime.Interval = new TimeSpan(0, 0, 1); //in Hour, Minutes, Second.
             InitBinding(bPanelFirst);
+
         }
+
+        private void dtClockTime_Tick(object sender, EventArgs e)
+        {
+            songTime.Text = (time++).ToString();
+            timeline.Value = time;
+            timeline.Maximum = currentSongTime;
+        }
+
         private void InitBinding(ButtonsPanel bp)
         {
             songList = new List<Song>();
-            songList.Add(new Song(1.35,"Title","Artist","Album",1998,1, "C:\\Users\\lxkn\\Desktop\\Solar & Białas\\Solar & Białas - #nowanormalnosc\\Solar & Białas - #znasznasprzezto ft. DJ Flip.mp3", "Rychu Peja - Niezla Nuta"));
-            songList.Add(new Song(1.35, "Title1", "Artist1", "Album1", 1998, 1, "C:\\Users\\lxkn\\Desktop\\Solar & Białas\\Solar & Białas - #nowanormalnosc\\Solar & Białas - A do Z.mp3", "Rychu Peja - Niezla Nuta"));
+            songList.Add(new Song(350,"Title","Artist","Album",1998,1, "C:\\Users\\lxkn\\Desktop\\Solar & Białas\\Solar & Białas - #nowanormalnosc\\Solar & Białas - #znasznasprzezto ft. DJ Flip.mp3", "Solar & Białas - #znasznasprzezto.mp3"));
+            songList.Add(new Song(350, "Title1", "Artist1", "Album1", 1998, 1, "C:\\Users\\lxkn\\Desktop\\Solar & Białas\\Solar & Białas - #nowanormalnosc\\Solar & Białas - A do Z.mp3", "Solar & Białas - A do Z.mp3"));
             playListView.ItemsSource = songList;
             playListView.SelectedItem = playListView.SelectedIndex + 1;
             index = 0;
@@ -68,6 +85,8 @@ namespace mPlayer
                 currentSec.Text = s.length.ToString();
                 maxSec.Text = s.length.ToString();
             }
+
+            //buttonIMAGE podpinamy pod Source
             /*playImage.Source = setImg(bp.playPath);
             stopImage.Source = setImg(bp.stopPath);
             nextImage.Source = setImg(bp.nextPath);
@@ -159,7 +178,8 @@ namespace mPlayer
         //sprawdzic w output czy sie zmienia
         private void stop_click(object sender, RoutedEventArgs e)
         {
-            
+                dtClockTime.Stop();
+                time = 0;
                 current_state.stopSong(this, songPath);
             
             //index = 1;
@@ -170,12 +190,20 @@ namespace mPlayer
         private void play_click(object sender, RoutedEventArgs e)
         {
                 current_state.playSong(this, songPath);
+
+                
+                dtClockTime.Tick += dtClockTime_Tick;
+
+                dtClockTime.Start();
         }
 
         private void playListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            
-               songPath =  (playListView.SelectedItem as Song).path;
+            currentSong.Text = (playListView.SelectedItem as Song).artist;
+            currentSong.Text += "-";
+            currentSong.Text += (playListView.SelectedItem as Song).title;
+            songPath =  (playListView.SelectedItem as Song).path;
+               currentSongTime = (playListView.SelectedItem as Song).length;
         }
     }
 

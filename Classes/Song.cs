@@ -8,7 +8,7 @@ namespace mPlayer.Classes
 {
     public class Song
     {
-        public double length { get; set; }
+        public int length { get; set; }
         public string title { get; set; }
         public string artist { get; set; }
         public string album { get; set; }
@@ -16,7 +16,7 @@ namespace mPlayer.Classes
         public int year { get; set; }
         public string fileName { get; set; }
         public string path { get; set; }
-        public Song(double length, string title, string artist, string album, int year, int number,string path,string fileName)
+        public Song(int length, string title, string artist, string album, int year, int number,string path,string fileName)
         {
             this.length = length;
             this.title = title;
