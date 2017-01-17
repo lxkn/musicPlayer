@@ -206,6 +206,11 @@ namespace mPlayer
             songPath =  (playListView.SelectedItem as Song).path;
                currentSongTime = (playListView.SelectedItem as Song).length;
         }
+        private void onListViewDoubleClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
     }
 
 }
