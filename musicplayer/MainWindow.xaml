@@ -68,7 +68,7 @@
         <Button x:Name="shuffleButton" Content="Sh" Foreground="White" Background="Transparent" Grid.ColumnSpan="2" Grid.Row="5" Grid.Column="8" Margin="0.333,0,42.667,0" >
             <!--<Image x:Name="shuffleImage" Height="25" Width="25" Source="{Binding ImagePath1}"/>-->
         </Button>
-        <Button x:Name="saveButton" Content="Save playlist" Background="Transparent" Foreground="Orange" Grid.Row="11" Grid.ColumnSpan="5" Margin="0,0,42.778,0"/>
+        <Button x:Name="saveButton" Content="Save playlist" Background="Transparent" Foreground="Orange" Grid.Row="13" Grid.ColumnSpan="5" Margin="0,0,42.778,0"/>
         <Slider x:Name="volume" Style="{StaticResource Horizontal_Slider}" Maximum="100" Grid.ColumnSpan="5" Grid.Row="0" Grid.Column="13" Margin="0.444,0,41.444,0" ValueChanged="volume_ValueChanged"/>
         <Slider x:Name="timeline" Style="{StaticResource Horizontal_Slider}" Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="10"/>
         <TextBlock x:Name="songTime" Foreground="White" Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="3"/>
@@ -105,7 +105,6 @@
                 </Style>
             </ListView.Resources>
         </ListView>
-        <TextBlock x:Name="error" Foreground="White" HorizontalAlignment="Left" Margin="10,10,0,-8" Grid.Row="13" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Grid.ColumnSpan="15" Width="592"/>
     </Grid>
 
 </Window>
