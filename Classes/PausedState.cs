@@ -18,10 +18,9 @@ namespace mPlayer.Classes
             Console.WriteLine("Pauza na pauzie - tan bez zmian");
         }
 
-        public override void playSong(MainWindow context, string path)
+        public override void playSong(MainWindow context)
         {
             Console.WriteLine("Play song zmiana stanu na play");
-            //playmusic(path);
             base.setState(context, new PlayingState());
         }
 
@@ -30,7 +29,7 @@ namespace mPlayer.Classes
             Console.WriteLine("Poprzednia piosenka - stan bez zmian");
         }
 
-        public override void stopSong(MainWindow context, string path)
+        public override void stopSong(MainWindow context)
         {
             Console.WriteLine("Stop - zmian stanu na stopped");
             base.setState(context, new StoppedState());

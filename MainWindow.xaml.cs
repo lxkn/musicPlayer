@@ -29,7 +29,7 @@ namespace mPlayer
     public partial class MainWindow : Window
     {
         //obecny stan odtwarzacza
-        private PlayState current_state;
+        private PlayState current_state = new StoppedState();
         //Director
         ButtonCreater mainCreate = new ButtonCreater();
         //Builder FirstButtonsBuilder
@@ -39,11 +39,12 @@ namespace mPlayer
         public static Album ObservableCollection { get; private set; }
         //ObservableC = ObservableCollection ();
         int index;
-        string songPath;
+        public string songPath { get; set; }
         //Song Timer
         DispatcherTimer dtClockTime = new DispatcherTimer();
         int time = 0;
         int currentSongTime;
+        public WMPLib.WindowsMediaPlayer mp3player = new WMPLib.WindowsMediaPlayer();
 
         public MainWindow()
         {
@@ -53,10 +54,11 @@ namespace mPlayer
             mainCreate.createButtons();
             ButtonsPanel bPanelFirst = mainCreate.getPanel();
             // stan poczatkowy to Stopped
-            current_state = new StoppedState();
             //Tworzenie Singleton Pattern - Library
             Library lb = Library.Instance;
             //Podpinanie buttonów do obrazka
+
+            //Ustawianie interwału
             dtClockTime.Interval = new TimeSpan(0, 0, 1); //in Hour, Minutes, Second.
             InitBinding(bPanelFirst);
 
@@ -67,6 +69,7 @@ namespace mPlayer
             songTime.Text = (time++).ToString();
             timeline.Value = time;
             timeline.Maximum = currentSongTime;
+            dtClockTime.Interval = new TimeSpan(0, 0, 1);
         }
 
         private void InitBinding(ButtonsPanel bp)
@@ -77,7 +80,7 @@ namespace mPlayer
             playListView.ItemsSource = songList;
             playListView.SelectedItem = playListView.SelectedIndex + 1;
             index = 0;
-            this.UpdateDefaultStyle();
+            //this.UpdateDefaultStyle();
             
             foreach (Song s in songList)
             {
@@ -180,7 +183,7 @@ namespace mPlayer
         {
                 dtClockTime.Stop();
                 time = 0;
-                current_state.stopSong(this, songPath);
+                current_state.stopSong(this);
             
             //index = 1;
             playListView.Items.Refresh();
@@ -189,7 +192,7 @@ namespace mPlayer
 
         private void play_click(object sender, RoutedEventArgs e)
         {
-                current_state.playSong(this, songPath);
+                current_state.playSong(this);
 
                 
                 dtClockTime.Tick += dtClockTime_Tick;
@@ -205,6 +208,14 @@ namespace mPlayer
             songPath =  (playListView.SelectedItem as Song).path;
                currentSongTime = (playListView.SelectedItem as Song).length;
         }
+        private void onListViewDoubleClick(object sender, RoutedEventArgs e)
+        {
+            current_state.stopSong(this);
+            current_state.playSong(this);
+            dtClockTime.Tick += dtClockTime_Tick;
+            dtClockTime.Start();
+        }
+
     }
 
 }

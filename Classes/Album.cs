@@ -13,7 +13,7 @@ namespace mPlayer.Classes
         public String label { get; set; }
         public List<Song> songList { get; set;}
 
-        /*public Album(String title, String author, String year, String label)
+        public Album(String title, String author, String year, String label)
         {
             this.title = title;
             this.author = author;
@@ -23,6 +23,6 @@ namespace mPlayer.Classes
         public Album()
         {
 
-        }*/
+        }
     }
 }
