@@ -6,31 +6,38 @@ using System.Threading.Tasks;
 
 namespace mPlayer.Classes
 {
-    class LoopIterator : IIterator
+    class TottalyRandomIterator : IIterator
     {
         List<Song> songs = null;
         int index = 0;
 
-        public LoopIterator(List<Song> list, int idx)
+
+        public TottalyRandomIterator(List<Song> list, int idx)
         {
             songs = list;
             index = idx;
         }
 
-        Song First { get; }
-        Song Last { get; }
+        Random rnd = new Random();
+
+
+
+        Song First { get { index = 0; return songs[index]; } }
+        Song Last { get { index = songs.Count; return songs[index]; } }
         Song Next
         {
             get
             {
-                return songs[index];
+                if (hasNext) { return songs[Enumerable.Range(0, songs.Count).OrderBy(r =>return rnd.Next())]; }
+                else { return null; }
             }
         }
         Song Previous
         {
             get
             {
-                return songs[index];
+                if (hasPrevious) { return songs[Enumerable.Range(0, songs.Count).OrderBy(r =>return rnd.Next())]; }
+                else { return null; }
             }
         }
         Boolean hasNext
@@ -38,6 +45,7 @@ namespace mPlayer.Classes
             get
             {
                 return true;
+
             }
         }
         Boolean hasPrevious
@@ -45,8 +53,10 @@ namespace mPlayer.Classes
             get
             {
                 return true;
+
             }
         }
+
 
     }
 }

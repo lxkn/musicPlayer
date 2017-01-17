@@ -8,5 +8,11 @@ namespace mPlayer.Classes
 {
     class IIterator
     {
+        Song First { get; }
+        Song Last { get; }
+        Song Next { get; }
+        Song Previous { get; }
+        Boolean hasNext { get; }
+        Boolean hasPrevious { get; }
     }
 }
