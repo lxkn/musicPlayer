@@ -28,7 +28,7 @@
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Background" Value="#E59400" />
                                 <Setter Property="Foreground" Value="White" />
-                                <Setter TargetName="PathIcon" Property="Fill" Value="Black" />
+                                <Setter TargetName="PathIcon" Property="Fill" Value="White" />
                             </Trigger>
 
                             <Trigger Property="IsPressed" Value="True">
@@ -76,29 +76,64 @@
             <RowDefinition Height="1*" />
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
-        <Button x:Name="button" Grid.ColumnSpan="2" Content="Test_Play" Grid.Column="2" HorizontalAlignment="Left" Margin="6,6,0,0" Grid.Row="4" VerticalAlignment="Top" Width="75" Click="play_click"/>
-        <Button x:Name="button1" Grid.ColumnSpan="2" Content="TestStop" Grid.Column="4" HorizontalAlignment="Left" Margin="10,7,0,0" Grid.Row="4" VerticalAlignment="Top" Width="75" Click="stop_click"/>
-        <Button x:Name="eloszka" Style="{StaticResource GellButton}"  Background="Transparent" Grid.ColumnSpan="1" Grid.Row="2" Grid.Column="2" Margin="6,29,36,10" Grid.RowSpan="2">
-            <Image x:Name="imageButton" Height="25" Width="25" Grid.ColumnSpan="1" Grid.Row="2" Grid.Column="4" Source="{Binding ImagePath}"/>
-           
+        <Image Source="C:\Users\lxkn\Documents\Visual Studio 2015\Projects\mPlayer\mPlayer\bin\Debug\upper.png" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="20" Stretch="Fill" Grid.RowSpan="4"/>
+        <Image Source="C:\Users\lxkn\Documents\Visual Studio 2015\Projects\mPlayer\mPlayer\bin\Debug\upper.png" Grid.Column="0" Grid.Row="11" Grid.ColumnSpan="20" Stretch="Fill" Grid.RowSpan="4"/>
+        <TextBlock x:Name="currentSong" Foreground="White" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="5" />
+        <TextBlock x:Name="currentSec" Foreground="White"  Grid.Column="3" Grid.ColumnSpan="1" Grid.Row="2"/>
+        <TextBlock x:Name="maxSec" Foreground="White" Grid.Column="4" Grid.ColumnSpan="1" Grid.Row="2"/>
+        <Button x:Name="playButton" Content="p" Foreground="White" Background="Transparent" Grid.ColumnSpan="1" Grid.Row="3" Grid.Column="3"  Click="play_click" >
+            <!--="{StaticResource GellButton}" DODAC DO BUTTONÓW!!!-->
+            <!--<Image x:Name="playImage" Stretch="Fill" Source="{Binding ImagePath}"/>-->
         </Button>
-        <Button x:Name="e2" Style="{StaticResource GellButton}" Background="Transparent" Grid.ColumnSpan="1" Grid.Row="2" Grid.Column="3" Grid.RowSpan="2" >
-            <Image x:Name="imageButton1" Height="25" Width="25" Grid.ColumnSpan="1" Grid.Row="2" Grid.Column="5" Source="{Binding ImagePath1}"/>
+        <Button x:Name="stopButton" Content="s" Foreground="White" Background="Transparent" Grid.ColumnSpan="1" Grid.Row="3" Grid.Column="4" Click="stop_click" >
+            <!--<Image x:Name="stopImage" Height="25" Width="25" Source="{Binding ImagePath1}"/>-->
         </Button>
-        <Image x:Name="imageButton2" Height="25" Width="25" Grid.ColumnSpan="1" Grid.Row="2" Grid.Column="6" Source="{Binding ImagePath2}"/>
-        <Image x:Name="imageButton3" Height="25" Width="25" Grid.ColumnSpan="1" Grid.Row="2" Grid.Column="7" Source="{Binding ImagePath3}"/>
-        <Image x:Name="imageButton4" Height="25" Width="25" Grid.ColumnSpan="1" Grid.Row="2" Grid.Column="8" Source="{Binding ImagePath4}"/>
-        <Image x:Name="imageButton5" Height="25" Width="25" Grid.ColumnSpan="1" Grid.Row="2" Grid.Column="9" Source="{Binding ImagePath5}"/>
-        <ListView x:Name="playListView" Grid.Column="3" Grid.Row="5" Grid.ColumnSpan="10" Grid.RowSpan="6">
+        <Button x:Name="previousButton" Content="Pr" Foreground="White" Background="Transparent" Grid.ColumnSpan="1" Grid.Row="3" Grid.Column="5">
+            <!--<Image x:Name="previousImage" Height="25" Width="25" Source="{Binding ImagePath1}"/>-->
+        </Button>
+        <Button x:Name="nextButton" Content="Ne" Foreground="White" Background="Transparent" Grid.ColumnSpan="1" Grid.Row="3" Grid.Column="6" >
+            <!--<Image x:Name="nextImage" Height="25" Width="25" Source="{Binding ImagePath1}"/>-->
+        </Button>
+        <Button x:Name="repeatButton" Content="Rep" Foreground="White" Background="Transparent" Grid.ColumnSpan="1" Grid.Row="3" Grid.Column="7" >
+            <!--<Image x:Name="repeatImage" Height="25" Width="25" Source="{Binding ImagePath1}"/>-->
+        </Button>
+        <Button x:Name="shuffleButton" Content="Sh" Foreground="White" Background="Transparent" Grid.ColumnSpan="1" Grid.Row="3" Grid.Column="8" >
+            <!--<Image x:Name="shuffleImage" Height="25" Width="25" Source="{Binding ImagePath1}"/>-->
+        </Button>
+        <Button x:Name="saveButton" Content="Save playlist" Background="Transparent" Foreground="Orange" Grid.Row="11" Grid.ColumnSpan="4"/>
+        <Slider x:Name="volume" Maximum="100" Grid.ColumnSpan="4" Grid.Row="3" Grid.Column="13"/>
+        <ListView x:Name="playListView" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="10" Grid.RowSpan="7">
             <ListView.View>
                 <GridView AllowsColumnReorder="True">
                     <GridViewColumn DisplayMemberBinding="{Binding Path=number}" Header="Number"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=fileName}" Header="File name"></GridViewColumn>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=length}" Header="Length"></GridViewColumn>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=artist}" Header="Autor"></GridViewColumn>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=title}" Header="Album"></GridViewColumn>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=artist}" Header="Artist"></GridViewColumn>
                 </GridView>
             </ListView.View>
+            <ListView.Resources>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Foreground" Value="Black"/>
+                </Style>
+            </ListView.Resources>
+        </ListView>
+        
+        <ListView x:Name="libraryListView" Grid.Column="10" Grid.Row="4" Grid.ColumnSpan="8" Grid.RowSpan="7">
+            <ListView.View>
+                <GridView AllowsColumnReorder="True">
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=title}" Header="Album"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=author}" Header="Autor"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=year}" Header="Rok"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=label}" Header="Label"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+            <ListView.Resources>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Foreground" Value="Black"/>
+                </Style>
+            </ListView.Resources>
         </ListView>
     </Grid>
     

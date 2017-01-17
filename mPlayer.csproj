@@ -59,6 +59,7 @@
     </ApplicationDefinition>
     <Compile Include="Classes\Album.cs" />
     <Compile Include="Classes\ButtonCreater.cs" />
+    <Compile Include="Classes\Library.cs" />
     <Compile Include="CustomButton.xaml.cs">
       <DependentUpon>CustomButton.xaml</DependentUpon>
     </Compile>
@@ -77,9 +78,6 @@
     <Compile Include="Classes\StoppedState.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Views\Library.xaml.cs">
-      <DependentUpon>Library.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
@@ -111,10 +109,6 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="CustomButton.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Library.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using mPlayer.Views;
+//using mPlayer.Views;
 namespace mPlayer.Classes
 {
     class PausedState : PlayState

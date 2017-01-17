@@ -12,9 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using mPlayer.Classes;
-using mPlayer.Views;
+//using mPlayer.Views;
 using System.IO;
 using System.Xml.Serialization;
+using System.Xml.Linq;
 
 namespace mPlayer
 {
@@ -31,7 +32,8 @@ namespace mPlayer
         //Builder FirstButtonsBuilder
         ButtonI builder = new FirstButtonsBuilder();
         List<Song> songList;
-        
+        private static List<Album> albumList;
+
 
         public MainWindow()
         {
@@ -44,25 +46,68 @@ namespace mPlayer
             current_state = new StoppedState();
             //Tworzenie Singleton Pattern - Library
             Library lb = Library.Instance;
-            lb.Show();
             //Podpinanie buttonów do obrazka
             InitBinding(bPanelFirst);
         }
         private void InitBinding(ButtonsPanel bp)
         {
             songList = new List<Song>();
-            songList.Add(new Song(1.35,"Title","Artist","Album",1998,1,"path.mp3"));
+            songList.Add(new Song(1.35,"Title","Artist","Album",1998,1,"path.mp3","Rychu Peja - Niezla Nuta"));
             playListView.ItemsSource = songList;
-            imageButton.Source = setImg(bp.playPath);
-            imageButton1.Source = setImg(bp.playPath);
-            imageButton2.Source = setImg(bp.playPath);
-            imageButton3.Source = setImg(bp.playPath);
-            imageButton4.Source = setImg(bp.playPath);
-            imageButton5.Source = setImg(bp.playPath);
-
+            foreach(Song s in songList)
+            {
+                currentSong.Text = s.fileName;
+                currentSec.Text = s.length.ToString();
+                maxSec.Text = s.length.ToString();
+            }
+            /*playImage.Source = setImg(bp.playPath);
+            stopImage.Source = setImg(bp.stopPath);
+            nextImage.Source = setImg(bp.nextPath);
+            previousImage.Source = setImg(bp.previousPath);
+            repeatImage.Source = setImg(bp.repeatPath);
+            shuffleImage.Source = setImg(bp.shufflePath);*/
+            albumList = new List<Album>();
+            albumList = loadXml(albumList);
+            foreach (Album a in albumList)
+            {
+                Console.Write(a.author);
+            }
+            //Podpianie ItemsSource do albumList
+            libraryListView.ItemsSource = albumList;
+            /* imageButton2.Source = setImg(bp.playPath);
+             imageButton3.Source = setImg(bp.playPath);
+             imageButton4.Source = setImg(bp.playPath);
+             imageButton5.Source = setImg(bp.playPath);
+             */
 
         }
-        
+        //Wczytywanie albumów z pliku xml do Listy
+        private List<Album> loadXml(List<Album> albumList)
+        {
+
+            albumList = (
+                from e in XDocument.Load("albumList.xml").Root.Elements("album")//root element w <albumList>
+                select new Album
+                {
+                    title = (string)e.Element("title"),
+                    author = (string)e.Element("author"),
+                    year = (string)e.Element("year"),
+                    label = (string)e.Element("label"),
+                    songList = (
+                       from o in e.Elements("songList").Elements("song")//root element w <songList>
+                       select new Song
+                       {
+                           length = (int)o.Element("length"),
+                           title = (string)o.Element("title"),
+                           artist = (string)o.Element("artist"),
+                           album = (string)o.Element("album"),
+                           number = (int)o.Element("number"),
+                           year = (int)o.Element("year")
+                       }).ToList()
+                }).ToList();
+            return albumList;
+        }
+
         //Ustawianie path do Obrazka
         private BitmapImage setImg(string path)
         {
