@@ -33,6 +33,8 @@ namespace mPlayer
         ButtonI builder = new FirstButtonsBuilder();
         List<Song> songList;
         private static List<Album> albumList;
+        public static Album ObservableCollection { get; private set; }
+        //ObservableC = ObservableCollection ();
         int index;
 
         public MainWindow()
@@ -148,6 +150,8 @@ namespace mPlayer
                 current_state = value;
             }
         }
+
+       
 
 
         //TEST STANOW musialem wstawic przykladowe buttony by wywolac funkcje play,stop ze stanow i zobaczyc cyz dziala
