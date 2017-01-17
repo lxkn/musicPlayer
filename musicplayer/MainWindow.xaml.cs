@@ -56,7 +56,7 @@ namespace mPlayer
             //Tworzenie Singleton Pattern - Library
             Library lb = Library.Instance;
             //Podpinanie buttonów do obrazka
-
+            volume.Value = mp3player.settings.volume;
             //Ustawianie interwału
             dtClockTime.Interval = new TimeSpan(0, 0, 1); //in Hour, Minutes, Second.
             InitBinding(bPanelFirst);
@@ -218,8 +218,8 @@ namespace mPlayer
 
         private void libraryListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            AlbumInfo albumInfo = new AlbumInfo(songList);
-            albumInfo.Show();
+           // AlbumInfo albumInfo = new AlbumInfo(songList);
+            //albumInfo.Show();
             playListView.ItemsSource=(libraryListView.SelectedItem as Album).songList;
            /* foreach (Album a in albumList)
             {
@@ -235,8 +235,11 @@ namespace mPlayer
             dtClockTime.Tick += dtClockTime_Tick;
             dtClockTime.Start();
         }
-
-
+        
+        private void volume_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        { 
+            mp3player.settings.volume = Convert.ToInt32(volume.Value);
+        }
     }
 
 }
