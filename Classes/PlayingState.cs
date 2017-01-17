@@ -9,7 +9,7 @@ namespace mPlayer.Classes
     class PlayingState : PlayState, IPlayer
     {
         playAdapter playAdapter;
-        System.Media.SoundPlayer mp3player;
+        WMPLib.WindowsMediaPlayer mp3player;
         public override void nextSong(MainWindow context)
         {
             Console.WriteLine("Nastepna piosenka - stan bez zmian");
@@ -23,21 +23,21 @@ namespace mPlayer.Classes
 
         public void playmusic(string songpath)
         {
+
+
             String type;
             type = songpath.Substring(songpath.Length - 4);
 
 
             if (type.Equals(".mp3", StringComparison.InvariantCultureIgnoreCase))
             {
-                mp3player = new System.Media.SoundPlayer();
-                mp3player.SoundLocation = songpath;
-                mp3player.Play();
-
-
+                mp3player = new WMPLib.WindowsMediaPlayer();
+                mp3player.URL = songpath;
+                mp3player.controls.play();
             }
 
 
-            else if (type.Equals(".wav", StringComparison.InvariantCultureIgnoreCase))
+            else if (type.Equals(".mp3", StringComparison.InvariantCultureIgnoreCase))
             {
                 playAdapter = new playAdapter(songpath);
                 playAdapter.play(songpath);
@@ -57,6 +57,7 @@ namespace mPlayer.Classes
         public override void previousSong(MainWindow context)
         {
             Console.WriteLine("Poprzednia piosenka - stan bez zmian");
+            
         }
 
         public override void stopSong(MainWindow context)

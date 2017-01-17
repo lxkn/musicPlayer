@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 using WMPLib;
 namespace mPlayer.Classes
 {
-    
+
     class playAdapter : MainWindow
     {
-        WMPLib.WindowsMediaPlayer wplayer;
+        System.Media.SoundPlayer wplayer;
 
         public playAdapter(String songpath)
         {
@@ -18,20 +18,21 @@ namespace mPlayer.Classes
 
             if (type.Equals(".wav", StringComparison.InvariantCultureIgnoreCase))
             {
-                wplayer = new WMPLib.WindowsMediaPlayer();
+                wplayer = new System.Media.SoundPlayer();
             }
         }
-                
 
-       			
-     public void play(String songpath)
+
+
+        public void play(String songpath)
         {
             String type;
             type = songpath.Substring(songpath.Length - 4);
             if (type.Equals(".wav", StringComparison.InvariantCultureIgnoreCase))
             {
-                wplayer.URL = songpath;
-                wplayer.controls.play();
+
+                wplayer.SoundLocation = songpath;
+                wplayer.Play();
             }
 
 
