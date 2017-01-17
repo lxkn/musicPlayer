@@ -75,8 +75,9 @@ namespace mPlayer
         private void InitBinding(ButtonsPanel bp)
         {
             songList = new List<Song>();
-            songList.Add(new Song(350,"Title","Artist","Album",1998,1, "C:\\Users\\lxkn\\Desktop\\Solar & Białas\\Solar & Białas - #nowanormalnosc\\Solar & Białas - #znasznasprzezto ft. DJ Flip.mp3", "Solar & Białas - #znasznasprzezto.mp3"));
-            songList.Add(new Song(350, "Title1", "Artist1", "Album1", 1998, 1, "C:\\Users\\lxkn\\Desktop\\Solar & Białas\\Solar & Białas - #nowanormalnosc\\Solar & Białas - A do Z.mp3", "Solar & Białas - A do Z.mp3"));
+            songList.Add(new Song(350,"Title","Artist","Album",1998,1, "C:\\Users\\Sebastian Paszko\\Desktop\\paluch.mp3", "Solar & Białas - #znasznasprzezto.mp3"));
+            songList.Add(new Song(350, "Title1", "Artist1", "Album1", 1998, 1, "C:\\Users\\Sebastian Paszko\\Desktop\\metallica.mp3", "Solar & Białas - A do Z.mp3"));
+            songList.Add(new Song(350, "Title1", "Artist1", "Album1", 1998, 1, "C:\\Users\\Sebastian Paszko\\Desktop\\wav_kozak.wav", "wav_kozak.wav"));
             playListView.ItemsSource = songList;
             playListView.SelectedItem = playListView.SelectedIndex + 1;
             index = 0;

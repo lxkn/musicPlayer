@@ -22,10 +22,29 @@ namespace mPlayer.Classes
 
         public override void playSong(MainWindow context)
         {
-            Console.WriteLine("Stan stopped - play");
-            context.mp3player.URL = context.songPath;
-            context.mp3player.controls.play();
-            base.setState(context, new PlayingState());
+            String type = context.songPath.Substring(context.songPath.Length - 4);
+
+
+            if (type.Equals(".mp3", StringComparison.InvariantCultureIgnoreCase))
+            {
+
+                Console.WriteLine("Stan stopped - play - mp3");
+                context.mp3player.URL = context.songPath;
+                context.mp3player.controls.play();
+                base.setState(context, new PlayingState());
+            }
+            else if(type.Equals(".wav", StringComparison.InvariantCultureIgnoreCase))
+            {
+                Console.WriteLine("Stan stopped - play - wav");
+                playAdapter playAdapter = new playAdapter();
+                playAdapter.play(context.songPath);
+                base.setState(context, new PlayingState());
+            }
+            else
+            {
+                Console.WriteLine("NIeodtwarzany format pliku");
+            }
+            
         }
 
         public override void previousSong(MainWindow context)
