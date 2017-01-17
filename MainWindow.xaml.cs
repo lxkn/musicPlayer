@@ -45,11 +45,10 @@ namespace mPlayer
         int time = 0;
         int currentSongTime;
         public WMPLib.WindowsMediaPlayer mp3player = new WMPLib.WindowsMediaPlayer();
-
+        public playAdapter playAdapter = new playAdapter();
         public MainWindow()
         {
             InitializeComponent();
-
             mainCreate.Builder = builder;
             mainCreate.createButtons();
             ButtonsPanel bPanelFirst = mainCreate.getPanel();
@@ -74,11 +73,19 @@ namespace mPlayer
 
         private void InitBinding(ButtonsPanel bp)
         {
+<<<<<<< HEAD
             /*songList = new List<Song>();
             songList.Add(new Song(350,"Title","Artist","Album",1998,1, "C:\\Users\\lxkn\\Desktop\\Solar & Białas\\Solar & Białas - #nowanormalnosc\\Solar & Białas - #znasznasprzezto ft. DJ Flip.mp3", "Solar & Białas - #znasznasprzezto.mp3"));
             songList.Add(new Song(350, "Title1", "Artist1", "Album1", 1998, 1, "C:\\Users\\lxkn\\Desktop\\Solar & Białas\\Solar & Białas - #nowanormalnosc\\Solar & Białas - A do Z.mp3", "Solar & Białas - A do Z.mp3"));
             */
             
+=======
+            songList = new List<Song>();
+            songList.Add(new Song(350,"Title","Artist","Album",1998,1, "C:\\Users\\Sebastian Paszko\\Desktop\\paluch.mp3", "Solar & Białas - #znasznasprzezto.mp3"));
+            songList.Add(new Song(350, "Title1", "Artist1", "Album1", 1998, 1, "C:\\Users\\Sebastian Paszko\\Desktop\\metallica.mp3", "Solar & Białas - A do Z.mp3"));
+            songList.Add(new Song(350, "Title1", "Artist1", "Album1", 1998, 1, "C:\\Users\\Sebastian Paszko\\Desktop\\wav_kozak.wav", "wav_kozak.wav"));
+            playListView.ItemsSource = songList;
+>>>>>>> 41e59b6f203474c8a632522cf68a1c62372ee09b
             playListView.SelectedItem = playListView.SelectedIndex + 1;
             index = 0;
             //this.UpdateDefaultStyle();

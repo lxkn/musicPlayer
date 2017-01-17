@@ -28,16 +28,13 @@ namespace mPlayer.Classes
         public override void previousSong(MainWindow context)
         {
             Console.WriteLine("Poprzednia piosenka - stan bez zmian");
-
         }
 
         public override void stopSong(MainWindow context)
         {
-            Console.WriteLine("Zatrzymaj sie - playing state");
-
-            context.mp3player.URL = context.songPath;
-            context.mp3player.controls.stop();
-            base.setState(context, new StoppedState());
+                context.mp3player.controls.stop();
+                context.playAdapter.stop(context.songPath);
+                base.setState(context, new StoppedState());
         }
     }
 }
