@@ -62,8 +62,10 @@
     </Compile>
     <Compile Include="Classes\Album.cs" />
     <Compile Include="Classes\ButtonCreater.cs" />
+    <Compile Include="Classes\IIterator.cs" />
     <Compile Include="Classes\IPlayer.cs" />
     <Compile Include="Classes\Library.cs" />
+    <Compile Include="Classes\LoopIterator.cs" />
     <Compile Include="Classes\playAdapter.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -75,11 +77,14 @@
     <Compile Include="Classes\PausedState.cs" />
     <Compile Include="Classes\PlayingState.cs" />
     <Compile Include="Classes\PlayState.cs" />
+    <Compile Include="Classes\RandomListIterator.cs" />
     <Compile Include="Classes\SecondButtonsBuilder.cs" />
     <Compile Include="Classes\Song.cs" />
+    <Compile Include="Classes\StandardIterator.cs" />
     <Compile Include="Classes\StoppedState.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\TottalyRandomIterator.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>

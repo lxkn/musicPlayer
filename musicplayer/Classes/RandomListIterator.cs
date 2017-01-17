@@ -8,6 +8,7 @@ namespace mPlayer.Classes
 {
     class RandomListIterator : IIterator
     {
+        /*
         List<Song> songs = null;
         int index = 0;
         int tmp = 0;
@@ -61,6 +62,7 @@ namespace mPlayer.Classes
                 else { return false; }
             }
         }
+        */
 
     }
 }

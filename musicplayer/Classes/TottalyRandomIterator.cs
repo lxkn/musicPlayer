@@ -8,7 +8,7 @@ namespace mPlayer.Classes
 {
     class TottalyRandomIterator : IIterator
     {
-        List<Song> songs = null;
+     /*   List<Song> songs = null;
         int index = 0;
 
 
@@ -30,6 +30,7 @@ namespace mPlayer.Classes
             {
                 if (hasNext) { return songs[Enumerable.Range(0, songs.Count).OrderBy(r =>return rnd.Next())]; }
                 else { return null; }
+                ;
             }
         }
         Song Previous
@@ -38,6 +39,7 @@ namespace mPlayer.Classes
             {
                 if (hasPrevious) { return songs[Enumerable.Range(0, songs.Count).OrderBy(r =>return rnd.Next())]; }
                 else { return null; }
+                ;
             }
         }
         Boolean hasNext
@@ -56,7 +58,7 @@ namespace mPlayer.Classes
 
             }
         }
-
+        */
 
     }
 }
