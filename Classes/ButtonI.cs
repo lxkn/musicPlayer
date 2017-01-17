@@ -14,7 +14,7 @@ namespace mPlayer.Classes
         {
             bp = new ButtonsPanel();
         }
-        public  ButtonsPanel getPanel()
+        public ButtonsPanel getPanel()
         {
             return bp;
         }
