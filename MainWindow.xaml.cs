@@ -57,6 +57,8 @@ namespace mPlayer
             //Tworzenie Singleton Pattern - Library
             Library lb = Library.Instance;
             //Podpinanie buttonów do obrazka
+
+            //Ustawianie interwału
             dtClockTime.Interval = new TimeSpan(0, 0, 1); //in Hour, Minutes, Second.
             InitBinding(bPanelFirst);
 
@@ -208,6 +210,7 @@ namespace mPlayer
             songPath =  (playListView.SelectedItem as Song).path;
                currentSongTime = (playListView.SelectedItem as Song).length;
         }
+<<<<<<< HEAD
 
         private void libraryListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
@@ -220,6 +223,16 @@ namespace mPlayer
             }*/
             //playListView.ItemsSource
         }
+=======
+        private void onListViewDoubleClick(object sender, RoutedEventArgs e)
+        {
+            current_state.stopSong(this);
+            current_state.playSong(this);
+            dtClockTime.Tick += dtClockTime_Tick;
+            dtClockTime.Start();
+        }
+
+>>>>>>> refs/remotes/origin/master
     }
 
 }
