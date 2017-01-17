@@ -62,9 +62,6 @@
     <Compile Include="Classes\IPlayer.cs" />
     <Compile Include="Classes\Library.cs" />
     <Compile Include="Classes\playAdapter.cs" />
-    <Compile Include="CustomButton.xaml.cs">
-      <DependentUpon>CustomButton.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -110,10 +107,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="CustomButton.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

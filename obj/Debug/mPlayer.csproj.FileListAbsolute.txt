@@ -28,8 +28,6 @@ D:\musicPlayer\obj\Debug\mPlayer.csproj.GenerateResource.Cache
 C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\Views\App.g.cs
 C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\MainWindow.g.cs
 C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\MainWindow.baml
-C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\CustomButton.g.cs
-C:\Users\lxkn\documents\visual studio 2015\Projects\mPlayer\mPlayer\obj\Debug\CustomButton.baml
 C:\Users\User\Desktop\mplayer\musicplayer\bin\Debug\mPlayer.exe.config
 C:\Users\User\Desktop\mplayer\musicplayer\obj\Debug\mPlayer.exe
 C:\Users\User\Desktop\mplayer\musicplayer\obj\Debug\mPlayer.pdb

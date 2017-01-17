@@ -40,6 +40,33 @@ namespace mPlayer.Classes
                 Console.WriteLine("Nieobslugiwany format pliku: " + type);
             }
         }
+        public void stopmusic(string songpath)
+        {
+
+
+            String type;
+            type = songpath.Substring(songpath.Length - 4);
+
+
+            if (type.Equals(".mp3", StringComparison.InvariantCultureIgnoreCase))
+            {
+                mp3player = new WMPLib.WindowsMediaPlayer();
+                mp3player.URL = songpath;
+                mp3player.controls.stop();
+            }
+
+
+            else if (type.Equals(".mp3", StringComparison.InvariantCultureIgnoreCase))
+            {
+                playAdapter = new playAdapter(songpath);
+                playAdapter.stop(songpath);
+            }
+
+            else
+            {
+                Console.WriteLine("Nieobslugiwany format pliku: " + type);
+            }
+        }
         protected void setState(MainWindow context, PlayState state)
         {
             context.Current_state = state;

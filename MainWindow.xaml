@@ -104,7 +104,7 @@
         </Button>
         <Button x:Name="saveButton" Content="Save playlist" Background="Transparent" Foreground="Orange" Grid.Row="11" Grid.ColumnSpan="5" Margin="0,0,42.778,0"/>
         <Slider x:Name="volume" Maximum="100" Grid.ColumnSpan="5" Grid.Row="1" Grid.Column="13" Margin="0.444,0,41.444,0"/>
-        <ListView x:Name="playListView" Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="11" Grid.RowSpan="7" Margin="0,0,42.667,0">
+        <ListView x:Name="playListView" Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="11" Grid.RowSpan="7" Margin="0,0,42.667,0" SelectionChanged="playListView_SelectionChanged">
             <ListView.View>
                 <GridView AllowsColumnReorder="True">
                     <GridViewColumn DisplayMemberBinding="{Binding Path=number}" Header="Number"></GridViewColumn>
@@ -122,9 +122,9 @@
             </ListView.Resources>
         </ListView>
 
-        <ListView x:Name="libraryListView" Grid.Column="10" Grid.Row="6" Grid.ColumnSpan="8" Grid.RowSpan="7" Margin="0.333,0,-1.556,0">
-            <ListView.View>
-                <GridView AllowsColumnReorder="True">
+        <ListView x:Name="libraryListView" Grid.Column="10" Grid.Row="6" Grid.ColumnSpan="8" Grid.RowSpan="7" Margin="0.333,0,-1.556,0" >
+            <ListView.View >
+                <GridView AllowsColumnReorder="True" >
                     <GridViewColumn DisplayMemberBinding="{Binding Path=title}" Header="Album"></GridViewColumn>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=author}" Header="Autor"></GridViewColumn>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=year}" Header="Rok"></GridViewColumn>
@@ -137,6 +137,7 @@
                 </Style>
             </ListView.Resources>
         </ListView>
+        <TextBlock x:Name="error" Foreground="White" HorizontalAlignment="Left" Margin="10,10,0,-8" Grid.Row="13" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Grid.ColumnSpan="15" Width="592"/>
     </Grid>
 
 </Window>

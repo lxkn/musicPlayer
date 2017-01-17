@@ -31,7 +31,7 @@ namespace mPlayer.Classes
             Console.WriteLine("Poprzednia piosenka - stan bez zmian");
         }
 
-        public override void stopSong(MainWindow context)
+        public override void stopSong(MainWindow context,string path)
         {
             Console.WriteLine("Piosenka jest nieodtwarzana nic sie nie dzieje");
         }

@@ -30,7 +30,7 @@ namespace mPlayer.Classes
             Console.WriteLine("Poprzednia piosenka - stan bez zmian");
         }
 
-        public override void stopSong(MainWindow context)
+        public override void stopSong(MainWindow context, string path)
         {
             Console.WriteLine("Stop - zmian stanu na stopped");
             base.setState(context, new StoppedState());

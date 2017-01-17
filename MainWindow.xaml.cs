@@ -36,6 +36,7 @@ namespace mPlayer
         public static Album ObservableCollection { get; private set; }
         //ObservableC = ObservableCollection ();
         int index;
+        string songPath;
 
         public MainWindow()
         {
@@ -158,18 +159,23 @@ namespace mPlayer
         //sprawdzic w output czy sie zmienia
         private void stop_click(object sender, RoutedEventArgs e)
         {
-            current_state.stopSong(this);
-            index = 1;
+            
+                current_state.stopSong(this, songPath);
+            
+            //index = 1;
             playListView.Items.Refresh();
-            this.UpdateDefaultStyle();
+            //this.UpdateDefaultStyle();
         }
 
         private void play_click(object sender, RoutedEventArgs e)
         {
-            foreach (Song s in songList)
-            {
-                current_state.playSong(this, s.path);
-            }
+                current_state.playSong(this, songPath);
+        }
+
+        private void playListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+               songPath =  (playListView.SelectedItem as Song).path;
         }
     }
 
