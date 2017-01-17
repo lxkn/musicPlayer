@@ -45,11 +45,10 @@ namespace mPlayer
         int time = 0;
         int currentSongTime;
         public WMPLib.WindowsMediaPlayer mp3player = new WMPLib.WindowsMediaPlayer();
-
+        public playAdapter playAdapter = new playAdapter();
         public MainWindow()
         {
             InitializeComponent();
-
             mainCreate.Builder = builder;
             mainCreate.createButtons();
             ButtonsPanel bPanelFirst = mainCreate.getPanel();

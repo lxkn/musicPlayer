@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 namespace mPlayer.Classes
 {
     abstract class PlayState
-    {
-        playAdapter playAdapter;
+    {      
         public abstract void playSong(MainWindow context);
         public abstract void pauseSong(MainWindow context);
         public abstract void stopSong(MainWindow context);

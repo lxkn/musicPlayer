@@ -36,8 +36,7 @@ namespace mPlayer.Classes
             else if(type.Equals(".wav", StringComparison.InvariantCultureIgnoreCase))
             {
                 Console.WriteLine("Stan stopped - play - wav");
-                playAdapter playAdapter = new playAdapter();
-                playAdapter.play(context.songPath);
+                context.playAdapter.play(context.songPath);
                 base.setState(context, new PlayingState());
             }
             else
