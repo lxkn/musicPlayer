@@ -33,7 +33,7 @@ namespace mPlayer
         ButtonI builder = new FirstButtonsBuilder();
         List<Song> songList;
         private static List<Album> albumList;
-
+        int index;
 
         public MainWindow()
         {
@@ -53,8 +53,13 @@ namespace mPlayer
         {
             songList = new List<Song>();
             songList.Add(new Song(1.35,"Title","Artist","Album",1998,1,"path.mp3","Rychu Peja - Niezla Nuta"));
+            songList.Add(new Song(1.35, "Title1", "Artist1", "Album1", 1998, 1, "path1.mp3", "Rychu Peja - Niezla Nuta"));
             playListView.ItemsSource = songList;
-            foreach(Song s in songList)
+            playListView.SelectedItem = playListView.SelectedIndex + 1;
+            index = 0;
+            this.UpdateDefaultStyle();
+            
+            foreach (Song s in songList)
             {
                 currentSong.Text = s.fileName;
                 currentSec.Text = s.length.ToString();
@@ -80,6 +85,11 @@ namespace mPlayer
              imageButton5.Source = setImg(bp.playPath);
              */
 
+        }
+
+        public void onWindowLoad(Object sender, RoutedEventArgs e)
+        {
+            playListView.SelectedIndex = index;
         }
         //Wczytywanie albumów z pliku xml do Listy
         private List<Album> loadXml(List<Album> albumList)
@@ -145,6 +155,9 @@ namespace mPlayer
         private void stop_click(object sender, RoutedEventArgs e)
         {
             current_state.stopSong(this);
+            index = 1;
+            playListView.Items.Refresh();
+            this.UpdateDefaultStyle();
         }
 
         private void play_click(object sender, RoutedEventArgs e)
