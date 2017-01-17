@@ -230,6 +230,12 @@ namespace mPlayer {
             return;
             case 8:
             this.nextButton = ((System.Windows.Controls.Button)(target));
+            
+            #line 62 "..\..\MainWindow.xaml"
+            this.nextButton.Click += new System.Windows.RoutedEventHandler(this.nextButtonClick);
+            
+            #line default
+            #line hidden
             return;
             case 9:
             this.repeatButton = ((System.Windows.Controls.Button)(target));
