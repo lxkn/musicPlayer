@@ -18,7 +18,7 @@ namespace mPlayer.Classes
             Console.WriteLine("Pauza na pauzie - tan bez zmian");
         }
 
-        public override void playSong(MainWindow context)
+        public override void playSong(MainWindow context, string path)
         {
             Console.WriteLine("Play song zmiana stanu na play");
             base.setState(context, new PlayingState());

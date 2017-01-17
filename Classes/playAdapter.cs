@@ -7,7 +7,7 @@ using WMPLib;
 namespace mPlayer.Classes
 {
     
-    class playAdapter : Player
+    class playAdapter : MainWindow
     {
         WMPLib.WindowsMediaPlayer wplayer;
 

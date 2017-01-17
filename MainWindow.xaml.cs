@@ -54,8 +54,8 @@ namespace mPlayer
         private void InitBinding(ButtonsPanel bp)
         {
             songList = new List<Song>();
-            songList.Add(new Song(1.35,"Title","Artist","Album",1998,1,"path.mp3","Rychu Peja - Niezla Nuta"));
-            songList.Add(new Song(1.35, "Title1", "Artist1", "Album1", 1998, 1, "path1.mp3", "Rychu Peja - Niezla Nuta"));
+            songList.Add(new Song(1.35,"Title","Artist","Album",1998,1, "C:\\Users\\lxkn\\Desktop\\Solar & Białas\\Solar & Białas - #nowanormalnosc\\Solar & Białas - #znasznasprzezto ft. DJ Flip.mp3", "Rychu Peja - Niezla Nuta"));
+            //songList.Add(new Song(1.35, "Title1", "Artist1", "Album1", 1998, 1, "path1.mp3", "Rychu Peja - Niezla Nuta"));
             playListView.ItemsSource = songList;
             playListView.SelectedItem = playListView.SelectedIndex + 1;
             index = 0;
@@ -166,7 +166,10 @@ namespace mPlayer
 
         private void play_click(object sender, RoutedEventArgs e)
         {
-            current_state.playSong(this);
+            foreach (Song s in songList)
+            {
+                current_state.playSong(this, s.path);
+            }
         }
     }
 

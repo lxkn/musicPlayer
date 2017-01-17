@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 //using mPlayer.Views;
 namespace mPlayer.Classes
 {
-    class PlayingState : PlayState
+    class PlayingState : PlayState, IPlayer
     {
+        playAdapter playAdapter;
+        System.Media.SoundPlayer mp3player;
         public override void nextSong(MainWindow context)
         {
             Console.WriteLine("Nastepna piosenka - stan bez zmian");
@@ -19,9 +21,37 @@ namespace mPlayer.Classes
             base.setState(context, new PausedState());
         }
 
-        public override void playSong(MainWindow context)
+        public void playmusic(string songpath)
         {
-            Console.WriteLine("Nic sie nie dzieje odtwarzacz gra");
+            String type;
+            type = songpath.Substring(songpath.Length - 4);
+
+
+            if (type.Equals(".mp3", StringComparison.InvariantCultureIgnoreCase))
+            {
+                mp3player = new System.Media.SoundPlayer();
+                mp3player.SoundLocation = songpath;
+                mp3player.Play();
+
+
+            }
+
+
+            else if (type.Equals(".wav", StringComparison.InvariantCultureIgnoreCase))
+            {
+                playAdapter = new playAdapter(songpath);
+                playAdapter.play(songpath);
+            }
+
+            else
+            {
+                Console.WriteLine("Nieobslugiwany format pliku: " + type);
+            }
+        }
+
+        public override void playSong(MainWindow context,string path)
+        {
+            playmusic(path);
         }
 
         public override void previousSong(MainWindow context)

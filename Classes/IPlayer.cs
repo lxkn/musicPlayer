@@ -8,7 +8,7 @@ namespace mPlayer.Classes
 {
     public interface IPlayer
     {
-        void playmusic(String path);
+        void playmusic(String soundpath);
 
     }
 }

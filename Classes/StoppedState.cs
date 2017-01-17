@@ -18,7 +18,7 @@ namespace mPlayer.Classes
             Console.WriteLine("Zatrzymanie piosenki na stooped -stan bez zmian");
         }
 
-        public override void playSong(MainWindow context)
+        public override void playSong(MainWindow context, string path)
         {
             Console.WriteLine("Odtwarzacz zaczyna grac przechodzi w stan playingState");
             base.setState(context, new PlayingState());

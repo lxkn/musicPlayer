@@ -8,7 +8,7 @@ namespace mPlayer.Classes
 {
     abstract class PlayState
     {
-        public abstract void playSong(MainWindow context);
+        public abstract void playSong(MainWindow context, string path);
         public abstract void pauseSong(MainWindow context);
         public abstract void stopSong(MainWindow context);
         public abstract void nextSong(MainWindow context);
