@@ -89,6 +89,17 @@
         <Image x:Name="imageButton3" Height="25" Width="25" Grid.ColumnSpan="1" Grid.Row="2" Grid.Column="7" Source="{Binding ImagePath3}"/>
         <Image x:Name="imageButton4" Height="25" Width="25" Grid.ColumnSpan="1" Grid.Row="2" Grid.Column="8" Source="{Binding ImagePath4}"/>
         <Image x:Name="imageButton5" Height="25" Width="25" Grid.ColumnSpan="1" Grid.Row="2" Grid.Column="9" Source="{Binding ImagePath5}"/>
+        <ListView x:Name="playListView" Grid.Column="3" Grid.Row="5" Grid.ColumnSpan="10" Grid.RowSpan="6">
+            <ListView.View>
+                <GridView AllowsColumnReorder="True">
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=number}" Header="Number"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=length}" Header="Length"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=artist}" Header="Autor"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=title}" Header="Album"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=artist}" Header="Artist"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
     
 </Window>

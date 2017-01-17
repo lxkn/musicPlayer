@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using mPlayer.Classes;
 using mPlayer.Views;
 using System.IO;
+using System.Xml.Serialization;
 
 namespace mPlayer
 {
@@ -29,6 +30,7 @@ namespace mPlayer
         ButtonCreater mainCreate = new ButtonCreater();
         //Builder FirstButtonsBuilder
         ButtonI builder = new FirstButtonsBuilder();
+        List<Song> songList;
         
 
         public MainWindow()
@@ -48,7 +50,9 @@ namespace mPlayer
         }
         private void InitBinding(ButtonsPanel bp)
         {
-
+            songList = new List<Song>();
+            songList.Add(new Song(1.35,"Title","Artist","Album",1998,1,"path.mp3"));
+            playListView.ItemsSource = songList;
             imageButton.Source = setImg(bp.playPath);
             imageButton1.Source = setImg(bp.playPath);
             imageButton2.Source = setImg(bp.playPath);
@@ -56,7 +60,9 @@ namespace mPlayer
             imageButton4.Source = setImg(bp.playPath);
             imageButton5.Source = setImg(bp.playPath);
 
+
         }
+        
         //Ustawianie path do Obrazka
         private BitmapImage setImg(string path)
         {
