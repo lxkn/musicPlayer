@@ -26,6 +26,7 @@ namespace mPlayer.Classes
                 mp3player = new WMPLib.WindowsMediaPlayer();
                 mp3player.URL = songpath;
                 mp3player.controls.play();
+                mp3player.settings.volume=10;
             }
 
 
