@@ -18,30 +18,14 @@ namespace mPlayer.Classes
 
         public void play(String songpath)
         {
-            String type;
-            type = songpath.Substring(songpath.Length - 4);
-            if (type.Equals(".wav", StringComparison.InvariantCultureIgnoreCase))
-            {
-
                 wplayer.SoundLocation = songpath;
                 wplayer.Play();
-            }
-
-
         }
 
         public void stop(String songpath)
         {
-            String type;
-            type = songpath.Substring(songpath.Length - 4);
-            if (type.Equals(".wav", StringComparison.InvariantCultureIgnoreCase))
-            {
-
                 wplayer.SoundLocation = songpath;
                 wplayer.Stop();
-            }
-
-
         }
     }
 }
