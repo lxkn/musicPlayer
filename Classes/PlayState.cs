@@ -12,7 +12,7 @@ namespace mPlayer.Classes
         WMPLib.WindowsMediaPlayer mp3player;
         public abstract void playSong(MainWindow context, string path);
         public abstract void pauseSong(MainWindow context);
-        public abstract void stopSong(MainWindow context);
+        public abstract void stopSong(MainWindow context, string path);
         public abstract void nextSong(MainWindow context);
         public abstract void previousSong(MainWindow context);
         public void playmusic(string songpath)
