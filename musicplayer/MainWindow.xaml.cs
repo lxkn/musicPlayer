@@ -46,8 +46,9 @@ namespace mPlayer
         int currentSongTime;
         public WMPLib.WindowsMediaPlayer mp3player = new WMPLib.WindowsMediaPlayer();
         public playAdapter playAdapter = new playAdapter();
-        StandardIterator normalIterator;
 
+        StandardIterator normalIterator;
+        public Song tempSong;
         public MainWindow()
         {
             InitializeComponent();
@@ -246,6 +247,8 @@ namespace mPlayer
         private void nextButtonClick(object sender, RoutedEventArgs e)
         {
             normalIterator = new StandardIterator(songList, (playListView.SelectedIndex));
+            tempSong = normalIterator.Next;
+            current_state.playSong(this);
         }
     }
 
