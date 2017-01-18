@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace mPlayer.Classes
 {
-    class IIterator
+    public class IIterator
     {
         Song First { get; }
         Song Last { get; }

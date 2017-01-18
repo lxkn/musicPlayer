@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace mPlayer.Classes
 {
-    class StandardIterator : IIterator
+    public class StandardIterator : IIterator
     {
         List<Song> songs = null;
         int index = 0;
@@ -17,9 +17,9 @@ namespace mPlayer.Classes
             index = idx;
         }
 
-        Song First { get { index = 0; return songs[index]; } }
-        Song Last { get { index = songs.Count; return songs[index]; } }
-        Song Next
+        public Song First { get { index = 0; return songs[index]; } }
+        public Song Last { get { index = songs.Count; return songs[index]; } }
+        public Song Next
         {
             get
             {
@@ -27,7 +27,7 @@ namespace mPlayer.Classes
                 else { return First; }
             }
         }
-        Song Previous
+        public Song Previous
         {
             get
             {
@@ -35,7 +35,7 @@ namespace mPlayer.Classes
                 else { return Last; }
             }
         }
-        Boolean hasNext
+        public Boolean hasNext
         {
             get
             {
@@ -43,7 +43,7 @@ namespace mPlayer.Classes
                 else { return false; }
             }
         }
-        Boolean hasPrevious
+        public Boolean hasPrevious
         {
             get
             {
