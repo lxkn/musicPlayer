@@ -84,7 +84,6 @@
     <Compile Include="Classes\StoppedState.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\TottalyRandomIterator.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
