@@ -46,8 +46,6 @@ namespace mPlayer
         int currentSongTime;
         public WMPLib.WindowsMediaPlayer mp3player = new WMPLib.WindowsMediaPlayer();
         public playAdapter playAdapter = new playAdapter();
-        StandardIterator normalIterator;
-
         public MainWindow()
         {
             InitializeComponent();
@@ -210,7 +208,6 @@ namespace mPlayer
 
         private void playListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //Ustawiamy wartość TextBlocku, w którym będzie się znajdować: artist-title oraz dlugość utworu
             currentSong.Text = (playListView.SelectedItem as Song).artist;
             currentSong.Text += "-";
             currentSong.Text += (playListView.SelectedItem as Song).title;
@@ -242,12 +239,7 @@ namespace mPlayer
         private void volume_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         { 
             mp3player.settings.volume = Convert.ToInt32(volume.Value);
-        }
-
-        //Next Song
-        private void nextButtonClick(object sender, RoutedEventArgs e)
-        {
-            normalIterator = new StandardIterator(songList, (playListView.SelectedIndex));
+            
         }
     }
 
