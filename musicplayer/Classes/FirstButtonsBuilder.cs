@@ -41,7 +41,7 @@ namespace mPlayer.Classes
 
         public override void buildStopButton()
         {
-            bp.stopPath = "stopButton.png";
+            bp.stopPath = "stop.png";
         }
         
     }

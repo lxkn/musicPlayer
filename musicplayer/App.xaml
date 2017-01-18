@@ -69,7 +69,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Thumb">
-                        <Ellipse Height="10" Width="10" Fill="#cc3399"></Ellipse>
+                        <Ellipse Height="10" Width="10" Fill="#006df0"></Ellipse>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>

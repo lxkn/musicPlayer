@@ -77,17 +77,8 @@ namespace mPlayer
 
         private void InitBinding(ButtonsPanel bp)
         {
-            /*songList = new List<Song>();
-            songList.Add(new Song(350,"Title","Artist","Album",1998,1, "C:\\Users\\lxkn\\Desktop\\Solar & Białas\\Solar & Białas - #nowanormalnosc\\Solar & Białas - #znasznasprzezto ft. DJ Flip.mp3", "Solar & Białas - #znasznasprzezto.mp3"));
-            songList.Add(new Song(350, "Title1", "Artist1", "Album1", 1998, 1, "C:\\Users\\lxkn\\Desktop\\Solar & Białas\\Solar & Białas - #nowanormalnosc\\Solar & Białas - A do Z.mp3", "Solar & Białas - A do Z.mp3"));
-            */
           
             songList = new List<Song>();
-          /*  songList.Add(new Song(350,"Title","Artist","Album",1998,1, "C:\\Users\\Sebastian Paszko\\Desktop\\paluch.mp3", "Solar & Białas - #znasznasprzezto.mp3"));
-            songList.Add(new Song(350, "Title1", "Artist1", "Album1", 1998, 1, "C:\\Users\\Sebastian Paszko\\Desktop\\metallica.mp3", "Solar & Białas - A do Z.mp3"));
-            songList.Add(new Song(350, "Title1", "Artist1", "Album1", 1998, 1, "C:\\Users\\Sebastian Paszko\\Desktop\\wav_kozak.wav", "wav_kozak.wav"));
-            playListView.ItemsSource = songList;
-            playListView.SelectedItem = playListView.SelectedIndex + 1;*/
             index = 0;
             //this.UpdateDefaultStyle();
             if (songList != null)
@@ -99,24 +90,20 @@ namespace mPlayer
                     maxSec.Text = s.length.ToString();
                 }
             }
-
             //buttonIMAGE podpinamy pod Source
-            /*playImage.Source = setImg(bp.playPath);
+            playImage.Source = setImg(bp.playPath);
             stopImage.Source = setImg(bp.stopPath);
             nextImage.Source = setImg(bp.nextPath);
             previousImage.Source = setImg(bp.previousPath);
             repeatImage.Source = setImg(bp.repeatPath);
-            shuffleImage.Source = setImg(bp.shufflePath);*/
+            shuffleImage.Source = setImg(bp.shufflePath);
+            pauseImage.Source = setImg(bp.pausePath);
             albumList = new List<Album>();
             albumList = loadXml(albumList);
             //Podpianie ItemsSource do albumList
             libraryListView.ItemsSource = albumList;
              
-            /* imageButton2.Source = setImg(bp.playPath);
-             imageButton3.Source = setImg(bp.playPath);
-             imageButton4.Source = setImg(bp.playPath);
-             imageButton5.Source = setImg(bp.playPath);
-             */
+             
 
         }
 
@@ -222,15 +209,9 @@ namespace mPlayer
 
         private void libraryListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-           // AlbumInfo albumInfo = new AlbumInfo(songList);
-            //albumInfo.Show();
             playListView.ItemsSource=(libraryListView.SelectedItem as Album).songList;
             normalIterator = new StandardIterator((libraryListView.SelectedItem as Album).songList, (playListView.SelectedIndex));
-            /* foreach (Album a in albumList)
-             {
-                 songList = a.songList;
-             }*/
-            //playListView.ItemsSource
+           
         }
 
         private void onListViewDoubleClick(object sender, RoutedEventArgs e)
