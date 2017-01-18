@@ -13,6 +13,7 @@ namespace mPlayer.Classes
         Song Last { get; }
         Song Next { get; }
         Song Previous { get; }
+        Song current { get; }
         Boolean hasNext { get; }
         Boolean hasPrevious { get; }
     }

@@ -18,7 +18,7 @@ namespace mPlayer.Classes
         }
 
         public Song First { get { index = 0; return songs[index]; } }
-        public Song Last { get { index = songs.Count; return songs[index]; } }
+        public Song Last { get { index = songs.Count-1; return songs[index]; } }
         public Song Next
         {
             get
@@ -52,8 +52,13 @@ namespace mPlayer.Classes
             }
         }
 
-
-
+        public Song current
+        {
+            get
+            {
+                return songs[index];
+            }
+        }
     }
 }
 
