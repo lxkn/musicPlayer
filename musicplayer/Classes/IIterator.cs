@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace mPlayer.Classes
 {
-    public class IIterator
+    public interface IIterator
     {
-        public Song First { get; }
-        public Song Last { get; }
-        public Song Next { get; }
-        public Song Previous { get; }
-        public Boolean hasNext { get; }
-        public Boolean hasPrevious { get; }
+       
+        Song First { get; }
+        Song Last { get; }
+        Song Next { get; }
+        Song Previous { get; }
+        Boolean hasNext { get; }
+        Boolean hasPrevious { get; }
     }
 }

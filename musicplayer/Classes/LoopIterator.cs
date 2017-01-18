@@ -17,30 +17,30 @@ namespace mPlayer.Classes
             index = idx;
         }
 
-        Song First { get; }
-        Song Last { get; }
-        Song Next
+        public Song First { get; }
+        public Song Last { get; }
+        public Song Next
         {
             get
             {
                 return songs[index];
             }
         }
-        Song Previous
+        public Song Previous
         {
             get
             {
                 return songs[index];
             }
         }
-        Boolean hasNext
+        public Boolean hasNext
         {
             get
             {
                 return true;
             }
         }
-        Boolean hasPrevious
+        public Boolean hasPrevious
         {
             get
             {

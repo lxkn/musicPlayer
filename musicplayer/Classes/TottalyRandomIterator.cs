@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace mPlayer.Classes
 {
-    class TottalyRandomIterator : IIterator
+    class TottalyRandomIterator
     {
      /*   List<Song> songs = null;
         int index = 0;

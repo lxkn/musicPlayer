@@ -225,7 +225,7 @@ namespace mPlayer
            // AlbumInfo albumInfo = new AlbumInfo(songList);
             //albumInfo.Show();
             playListView.ItemsSource=(libraryListView.SelectedItem as Album).songList;
-            normalIterator = new StandardIterator((libraryListView.SelectedItem as Album).songList, (playListView.SelectedIndex));
+            normalIterator = new RandomListIterator((libraryListView.SelectedItem as Album).songList, (playListView.SelectedIndex));
             /* foreach (Album a in albumList)
              {
                  songList = a.songList;
@@ -256,13 +256,13 @@ namespace mPlayer
         //Previous Song
         private void previousButtonClick(object sender, RoutedEventArgs e)
         {
-            tempSong = normalIterator.Next;
+            tempSong = normalIterator.Previous;
             current_state.previousSong(this);
         }
 
         private void shuffleButton_Click(object sender, RoutedEventArgs e)
         {
-            normalIterator = new RandomListIterator((libraryListView.SelectedItem as Album).songList, (playListView.SelectedIndex));
+            //normalIterator = new RandomListIterator((libraryListView.SelectedItem as Album).songList, (playListView.SelectedIndex));
         }
     }
 

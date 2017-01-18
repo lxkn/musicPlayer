@@ -20,7 +20,7 @@ namespace mPlayer.Classes
                 index = idx;
                 Random rnd = new Random();
 
-                numbers = Enumerable.Range(0, songs.Count).OrderBy(r =>
+                numbers = Enumerable.Range(0, (songs.Count-1)).OrderBy(r =>
                 {
 
                     return rnd.Next();
