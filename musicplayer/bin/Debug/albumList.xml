@@ -1,42 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <albumList>
-	<album>
-		<title>This is Title</title>
-		<author>This is Author</author>
-		<year>1995</year>
-		<label>This is Label</label>
-		<songList>
-			<song>
-				<length>195</length>
-				<title>#znasznasprzezto</title>
-				<artist>SolarBialas</artist>
-				<album>#nowanormalnosc</album>
-				<number>1</number>
-				<year>2016</year>
-				<path>C:\Users\Sebastian Paszko\Desktop\paluch.mp3</path>
-				<fileName>Paluch - 24H.mp3</fileName>
-			</song>
-			<song>
-				<length>195</length>
-				<title>#znasznasprzezto</title>
-				<artist>SolarBialas</artist>
-				<album>#nowanormalnosc</album>
-				<number>1</number>
-				<year>2016</year>
-				<path>C:\Users\Sebastian Paszko\Desktop\metallica.mp3</path>
-				<fileName>Paluch - 24H.mp3</fileName>
-
-			</song>
-			<song>
-				<length>195</length>
-				<title>#znasznasprzezto</title>
-				<artist>SolarBialas</artist>
-				<album>#nowanormalnosc</album>
-				<number>1</number>
-				<year>2016</year>
-				<path>C:\Users\Sebastian Paszko\Desktop\wav_kozak.wav</path>
-				<fileName>Paluch - 24H.mp3</fileName>
-			</song>
-		</songList>
-	</album>
+  <album>
+    <title>This is Title</title>
+    <author>This is Author</author>
+    <year>1995</year>
+    <label>This is Label</label>
+    <songList>
+      <song>
+        <length>195</length>
+        <title>#znasznasprzezto</title>
+        <artist>SolarBialas</artist>
+        <album>#nowanormalnosc</album>
+        <number>1</number>
+        <year>2016</year>
+	<path>C:\Users\lxkn\Desktop\Paluch - Ostatni Krzyk Osiedla (2016)\Paluch - Ostatni Krzyk Osiedla\Paluch - 061 ft. Onek87.mp3</path>
+        <fileName>Paluch - Gdybyś Kiedyś.mp3</fileName>
+      </song>
+      <song>
+        <length>195</length>
+        <title>#znasznasprzezto</title>
+        <artist>SolarBialas</artist>
+        <album>#nowanormalnosc</album>
+        <number>1</number>
+        <year>2016</year>
+	<path>C:\Users\lxkn\Desktop\Paluch - Ostatni Krzyk Osiedla (2016)\Paluch - Ostatni Krzyk Osiedla\Paluch - 061 ft. Onek87.mp3</path>
+        <fileName>Paluch - 061 ft. Onek87.mp3</fileName>
+      </song>
+      <song>
+        <length>195</length>
+        <title>#znasznasprzezto</title>
+        <artist>SolarBialas</artist>
+        <album>#nowanormalnosc</album>
+        <number>1</number>
+        <year>2016</year>
+	<path>C:\Users\lxkn\Desktop\Paluch - Ostatni Krzyk Osiedla (2016)\Paluch - Ostatni Krzyk Osiedla\Paluch - 061 ft. Onek87.mp3</path>
+        <fileName>Paluch - OKO.mp3</fileName>
+      </song>
+    </songList>
+  </album>
 </albumList>

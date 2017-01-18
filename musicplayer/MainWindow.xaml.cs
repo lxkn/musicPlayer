@@ -190,12 +190,12 @@ namespace mPlayer
 
         private void play_click(object sender, RoutedEventArgs e)
         {
+            if (playListView.Items.Count>0)
+            {
                 current_state.playSong(this);
-
-                
                 dtClockTime.Tick += dtClockTime_Tick;
-
                 dtClockTime.Start();
+            }
         }
 
         private void playListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -269,6 +269,7 @@ namespace mPlayer
                 new XElement("album",o.album),
                 new XElement("number",o.number),
                 new XElement("year", o.year),
+                new XElement("path",o.path),
                 new XElement("fileName", o.fileName)
                 ))));
             xEle.Save("albumList1.xml");

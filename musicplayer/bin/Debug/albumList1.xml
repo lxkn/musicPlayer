@@ -13,6 +13,7 @@
         <album>#nowanormalnosc</album>
         <number>1</number>
         <year>2016</year>
+        <path />
         <fileName>Paluch - Gdybyś Kiedyś.mp3</fileName>
       </song>
       <song>
@@ -22,6 +23,7 @@
         <album>#nowanormalnosc</album>
         <number>1</number>
         <year>2016</year>
+        <path />
         <fileName>Paluch - 061 ft. Onek87.mp3</fileName>
       </song>
       <song>
@@ -31,6 +33,7 @@
         <album>#nowanormalnosc</album>
         <number>1</number>
         <year>2016</year>
+        <path />
         <fileName>Paluch - OKO.mp3</fileName>
       </song>
     </songList>

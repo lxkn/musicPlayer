@@ -57,7 +57,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="RepeatButton">
-                        <Border SnapsToDevicePixels="True" Background="#cc3399"  BorderThickness="1" BorderBrush="YellowGreen" Height="3"/>
+                        <Border SnapsToDevicePixels="True" Background="#fff"  BorderThickness="1" BorderBrush="YellowGreen" Height="3"/>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
