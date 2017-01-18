@@ -251,10 +251,6 @@ namespace mPlayer
         //Next Song
         private void nextButtonClick(object sender, RoutedEventArgs e)
         {   
-<<<<<<< HEAD
-=======
-            tempSong = normalIterator.Next;
->>>>>>> master
             current_state.nextSong(this);
         }
         //Previous Song
