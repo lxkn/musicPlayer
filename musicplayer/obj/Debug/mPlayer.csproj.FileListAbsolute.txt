@@ -17,3 +17,22 @@ C:\Users\lxkn\Documents\visual studio 2015\Projects\mPlayer\mPlayer\musicplayer\
 C:\Users\lxkn\Documents\visual studio 2015\Projects\mPlayer\mPlayer\musicplayer\obj\Debug\mPlayer.exe
 C:\Users\lxkn\Documents\visual studio 2015\Projects\mPlayer\mPlayer\musicplayer\obj\Debug\mPlayer.pdb
 C:\Users\lxkn\Documents\visual studio 2015\Projects\mPlayer\mPlayer\musicplayer\obj\Debug\mPlayer.csprojResolveAssemblyReference.cache
+D:\musicPlayer\musicplayer\bin\Debug\mPlayer.exe.config
+D:\musicPlayer\musicplayer\obj\Debug\Interop.WMPLib.dll
+D:\musicPlayer\musicplayer\obj\Debug\mPlayer.csproj.ResolveComReference.cache
+D:\musicPlayer\musicplayer\obj\Debug\mPlayer.exe
+D:\musicPlayer\musicplayer\obj\Debug\mPlayer.pdb
+D:\musicPlayer\musicplayer\bin\Debug\mPlayer.exe
+D:\musicPlayer\musicplayer\bin\Debug\mPlayer.pdb
+D:\musicPlayer\musicplayer\obj\Debug\mPlayer.csprojResolveAssemblyReference.cache
+D:\musicPlayer\musicplayer\obj\Debug\AlbumInfo.g.cs
+D:\musicPlayer\musicplayer\obj\Debug\MainWindow.g.cs
+D:\musicPlayer\musicplayer\obj\Debug\App.g.cs
+D:\musicPlayer\musicplayer\obj\Debug\mPlayer_MarkupCompile.cache
+D:\musicPlayer\musicplayer\obj\Debug\mPlayer_MarkupCompile.lref
+D:\musicPlayer\musicplayer\obj\Debug\App.baml
+D:\musicPlayer\musicplayer\obj\Debug\AlbumInfo.baml
+D:\musicPlayer\musicplayer\obj\Debug\MainWindow.baml
+D:\musicPlayer\musicplayer\obj\Debug\mPlayer.g.resources
+D:\musicPlayer\musicplayer\obj\Debug\mPlayer.Properties.Resources.resources
+D:\musicPlayer\musicplayer\obj\Debug\mPlayer.csproj.GenerateResource.Cache
