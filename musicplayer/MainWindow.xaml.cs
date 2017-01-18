@@ -225,7 +225,7 @@ namespace mPlayer
            // AlbumInfo albumInfo = new AlbumInfo(songList);
             //albumInfo.Show();
             playListView.ItemsSource=(libraryListView.SelectedItem as Album).songList;
-            normalIterator = new RandomListIterator((libraryListView.SelectedItem as Album).songList, (playListView.SelectedIndex));
+            normalIterator = new StandardIterator((libraryListView.SelectedItem as Album).songList, (playListView.SelectedIndex));
             /* foreach (Album a in albumList)
              {
                  songList = a.songList;
@@ -250,7 +250,7 @@ namespace mPlayer
         //Next Song
         private void nextButtonClick(object sender, RoutedEventArgs e)
         {   
-                tempSong = normalIterator.Next;
+            tempSong = normalIterator.Next;
             current_state.nextSong(this);
         }
         //Previous Song
@@ -260,9 +260,39 @@ namespace mPlayer
             current_state.previousSong(this);
         }
 
+        //Change Songs shuffle
         private void shuffleButton_Click(object sender, RoutedEventArgs e)
         {
-            //normalIterator = new RandomListIterator((libraryListView.SelectedItem as Album).songList, (playListView.SelectedIndex));
+            normalIterator = new RandomListIterator((libraryListView.SelectedItem as Album).songList, (playListView.SelectedIndex));
+        }
+        //Change Songs Repeat One
+        private void repeatButton_Click(object sender, RoutedEventArgs e)
+        {
+            normalIterator = new LoopIterator((libraryListView.SelectedItem as Album).songList, (playListView.SelectedIndex));
+        }
+
+        private void saveButton_Click(object sender, RoutedEventArgs e)
+        {
+            var xEle = new XElement("albumList",
+                from emp in albumList
+                select new XElement("album",
+                new XElement("title",emp.title),
+                new XElement("author",emp.author),
+                new XElement("year", emp.year),
+                new XElement("label", emp.label),
+                new XElement("songList",
+                from o in (libraryListView.SelectedItem as Album).songList
+                select new XElement("song",
+                new XElement("length",o.length),
+                new XElement("title",o.title),
+                new XElement("artist",o.artist),
+                new XElement("album",o.album),
+                new XElement("number",o.number),
+                new XElement("year", o.year),
+                new XElement("fileName", o.fileName)
+                ))));
+            xEle.Save("albumList1.xml");
+                
         }
     }
 
