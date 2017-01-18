@@ -62,13 +62,13 @@
         <Button x:Name="nextButton" Content="Ne" Foreground="White" Background="Transparent" Grid.ColumnSpan="2" Grid.Row="5" Grid.Column="6" Margin="0.222,0,42.667,0" Click="nextButtonClick" >
             <!--<Image x:Name="nextImage" Height="25" Width="25" Source="{Binding ImagePath1}"/>-->
         </Button>
-        <Button x:Name="repeatButton" Content="Rep" Foreground="White" Background="Transparent" Grid.ColumnSpan="2" Grid.Row="5" Grid.Column="7" Margin="0.222,0,42.667,0" >
+        <Button x:Name="repeatButton" Content="Rep" Foreground="White" Background="Transparent" Grid.ColumnSpan="2" Grid.Row="5" Grid.Column="7" Margin="0.222,0,42.667,0" Click="repeatButton_Click">
             <!--<Image x:Name="repeatImage" Height="25" Width="25" Source="{Binding ImagePath1}"/>-->
         </Button>
         <Button x:Name="shuffleButton" Content="Sh" Foreground="White" Background="Transparent" Grid.ColumnSpan="2" Grid.Row="5" Grid.Column="8" Margin="0.333,0,42.667,0" Click="shuffleButton_Click" >
             <!--<Image x:Name="shuffleImage" Height="25" Width="25" Source="{Binding ImagePath1}"/>-->
         </Button>
-        <Button x:Name="saveButton" Content="Save playlist" Background="Transparent" Foreground="Orange" Grid.Row="13" Grid.ColumnSpan="5" Margin="0,0,42.778,0"/>
+        <Button x:Name="saveButton" Content="Save playlist" Background="Transparent" Foreground="Orange" Grid.Row="13" Grid.ColumnSpan="5" Margin="0,0,42.778,0" Click="saveButton_Click"/>
         <Slider x:Name="volume" Style="{StaticResource Horizontal_Slider}" Maximum="100" Grid.ColumnSpan="5" Grid.Row="0" Grid.Column="13" Margin="0.444,0,41.444,0" ValueChanged="volume_ValueChanged"/>
         <Slider x:Name="timeline" Style="{StaticResource Horizontal_Slider}" Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="10"/>
         <TextBlock x:Name="songTime" Foreground="White" Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="3"/>

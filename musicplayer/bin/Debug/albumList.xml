@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <albumList>
 	<album>
-		<title>Autor</title>
-		<author>Tytul</author>
+		<title>This is Title</title>
+		<author>This is Author</author>
 		<year>1995</year>
-		<label>Label</label>
+		<label>This is Label</label>
 		<songList>
 			<song>
 				<length>195</length>
