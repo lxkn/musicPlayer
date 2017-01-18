@@ -246,9 +246,9 @@ namespace mPlayer
 
         private void nextButtonClick(object sender, RoutedEventArgs e)
         {
-            normalIterator = new StandardIterator((libraryListView.SelectedItem as Album).songList, (playListView.SelectedIndex));
+            normalIterator = new StandardIterator(songList, (playListView.SelectedIndex));
             tempSong = normalIterator.Next;
-            current_state.nextSong(this);
+            current_state.playSong(this);
         }
     }
 
