@@ -21,6 +21,7 @@ namespace mPlayer.Classes
         public override void playSong(MainWindow context)
         {
             Console.WriteLine("Play song zmiana stanu na play");
+            context.mp3player.controls.play();
             base.setState(context, new PlayingState());
         }
 

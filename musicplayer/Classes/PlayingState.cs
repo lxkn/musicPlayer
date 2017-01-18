@@ -21,6 +21,7 @@ namespace mPlayer.Classes
         public override void pauseSong(MainWindow context)
         {
             Console.WriteLine("Zatrzymanie piosenki - zmiana stanu na pused");
+            context.mp3player.controls.pause();
             base.setState(context, new PausedState());
         }
 
