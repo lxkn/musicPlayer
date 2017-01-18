@@ -12,7 +12,8 @@ namespace mPlayer.Classes
         public override void nextSong(MainWindow context)
         {
             Console.WriteLine("Stan stopped - nextSong- play //- mp3");
-            context.mp3player.URL = context.tempSong.path;
+            Song tempSong = context.normalIterator.Next;
+            context.mp3player.URL = tempSong.path;
             context.mp3player.controls.play();
             base.setState(context, new PlayingState());
         }
@@ -51,12 +52,16 @@ namespace mPlayer.Classes
 
         public override void previousSong(MainWindow context)
         {
-            Console.WriteLine("Poprzednia piosenka - stan bez zmian");
+            Console.WriteLine("Previus - stopped state");
+            Song tempSong = context.normalIterator.Previous;
+            context.mp3player.URL = tempSong.path;
+            context.mp3player.controls.play();
+            base.setState(context, new PlayingState());
         }
 
         public override void stopSong(MainWindow context)
         {
-            Console.WriteLine("Stop song - stan stopped");
+            Console.WriteLine("Stop song  - nic sie nie dzieje - stan stopped");
             // stopmusic(path);
 
         }

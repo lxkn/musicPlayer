@@ -47,6 +47,13 @@ namespace mPlayer.Classes
                 return true;
             }
         }
+        public Song current
+        {
+            get
+            {
+                return songs[index];
+            }
+        }
 
     }
 }

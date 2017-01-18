@@ -48,7 +48,8 @@ namespace mPlayer
         public WMPLib.WindowsMediaPlayer mp3player = new WMPLib.WindowsMediaPlayer();
         public playAdapter playAdapter = new playAdapter();
 
-        IIterator normalIterator;
+        //Inicjalizacja iteratora
+        public IIterator normalIterator;
        // public Song tempSong;
         public MainWindow()
         {
@@ -225,7 +226,7 @@ namespace mPlayer
            // AlbumInfo albumInfo = new AlbumInfo(songList);
             //albumInfo.Show();
             playListView.ItemsSource=(libraryListView.SelectedItem as Album).songList;
-            normalIterator = new RandomListIterator((libraryListView.SelectedItem as Album).songList, (playListView.SelectedIndex));
+            normalIterator = new StandardIterator((libraryListView.SelectedItem as Album).songList, (playListView.SelectedIndex));
             /* foreach (Album a in albumList)
              {
                  songList = a.songList;
@@ -250,13 +251,11 @@ namespace mPlayer
         //Next Song
         private void nextButtonClick(object sender, RoutedEventArgs e)
         {   
-                tempSong = normalIterator.Next;
             current_state.nextSong(this);
         }
         //Previous Song
         private void previousButtonClick(object sender, RoutedEventArgs e)
         {
-            tempSong = normalIterator.Previous;
             current_state.previousSong(this);
         }
 
