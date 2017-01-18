@@ -47,12 +47,14 @@ namespace mPlayer
         int currentSongTime;
         public WMPLib.WindowsMediaPlayer mp3player = new WMPLib.WindowsMediaPlayer();
         public playAdapter playAdapter = new playAdapter();
+        bool isClicked,isClicked2;
 
         //Inicjalizacja iteratora
         public IIterator normalIterator;
        // public Song tempSong;
         public MainWindow()
         {
+            dtClockTime.Interval = new TimeSpan(0, 0, 1);
             InitializeComponent();
             mainCreate.Builder = builder;
             mainCreate.createButtons();
@@ -65,6 +67,8 @@ namespace mPlayer
             //Ustawianie interwału
             dtClockTime.Interval = new TimeSpan(0, 0, 1); //in Hour, Minutes, Second.
             InitBinding(bPanelFirst);
+            isClicked = false;
+            isClicked2 = false; // Aby Iterator był Standardowy 
 
         }
 
@@ -73,7 +77,6 @@ namespace mPlayer
             songTime.Text = (time++).ToString();
             timeline.Value = time;
             timeline.Maximum = currentSongTime;
-            dtClockTime.Interval = new TimeSpan(0, 0, 1);
         }
 
         private void InitBinding(ButtonsPanel bp)
@@ -231,49 +234,81 @@ namespace mPlayer
 
         //Next Song
         private void nextButtonClick(object sender, RoutedEventArgs e)
-        {   
-            current_state.nextSong(this);
+        {
+            if (playListView.Items.Count > 0)
+                current_state.nextSong(this);
         }
         //Previous Song
         private void previousButtonClick(object sender, RoutedEventArgs e)
         {
-            current_state.previousSong(this);
+            if (playListView.Items.Count > 0)
+                current_state.previousSong(this);
         }
 
         //Change Songs shuffle
         private void shuffleButton_Click(object sender, RoutedEventArgs e)
         {
-            normalIterator = new RandomListIterator((libraryListView.SelectedItem as Album).songList, (playListView.SelectedIndex));
+            if (playListView.Items.Count > 0)
+            {
+                if (isClicked2 == false)
+                {
+                    normalIterator = new RandomListIterator((libraryListView.SelectedItem as Album).songList, (playListView.SelectedIndex));
+                    isClicked = true;
+                }
+
+                else
+                    normalIterator = new StandardIterator((libraryListView.SelectedItem as Album).songList, (playListView.SelectedIndex));
+            }
+
         }
         //Change Songs Repeat One
         private void repeatButton_Click(object sender, RoutedEventArgs e)
         {
-            normalIterator = new LoopIterator((libraryListView.SelectedItem as Album).songList, (playListView.SelectedIndex));
+            if (playListView.Items.Count > 0)
+            {
+                if (isClicked == false)
+                {
+                    normalIterator = new LoopIterator((libraryListView.SelectedItem as Album).songList, (playListView.SelectedIndex));
+                    isClicked = true;
+                }
+
+                else
+                    normalIterator = new StandardIterator((libraryListView.SelectedItem as Album).songList, (playListView.SelectedIndex));
+            }
+            
         }
 
         private void saveButton_Click(object sender, RoutedEventArgs e)
         {
-            var xEle = new XElement("albumList",
-                from emp in albumList
-                select new XElement("album",
-                new XElement("title",emp.title),
-                new XElement("author",emp.author),
-                new XElement("year", emp.year),
-                new XElement("label", emp.label),
-                new XElement("songList",
-                from o in (libraryListView.SelectedItem as Album).songList
-                select new XElement("song",
-                new XElement("length",o.length),
-                new XElement("title",o.title),
-                new XElement("artist",o.artist),
-                new XElement("album",o.album),
-                new XElement("number",o.number),
-                new XElement("year", o.year),
-                new XElement("path",o.path),
-                new XElement("fileName", o.fileName)
-                ))));
-            xEle.Save("albumList1.xml");
-                
+            if (playListView.Items.Count > 0)
+            {
+                var xEle = new XElement("albumList",
+                    from emp in albumList
+                    select new XElement("album",
+                    new XElement("title", emp.title),
+                    new XElement("author", emp.author),
+                    new XElement("year", emp.year),
+                    new XElement("label", emp.label),
+                    new XElement("songList",
+                    from o in (libraryListView.SelectedItem as Album).songList
+                    select new XElement("song",
+                    new XElement("length", o.length),
+                    new XElement("title", o.title),
+                    new XElement("artist", o.artist),
+                    new XElement("album", o.album),
+                    new XElement("number", o.number),
+                    new XElement("year", o.year),
+                    new XElement("path", o.path),
+                    new XElement("fileName", o.fileName)
+                    ))));
+                xEle.Save("albumList1.xml");
+            }       
+        }
+
+        private void pauseButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (playListView.Items.Count > 0)
+                current_state.pauseSong(this);
         }
     }
 

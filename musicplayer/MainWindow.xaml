@@ -53,7 +53,7 @@
         <Button x:Name="playButton" Height="35" Width="35" Style="{StaticResource GellButton}" Foreground="White" Background="Transparent" Grid.ColumnSpan="2" Grid.Row="4" Grid.Column="7" Click="play_click" >
             <Image x:Name="playImage" Height="25" Width="25" Stretch="Fill" Source="{Binding ImagePath}"/>
         </Button>
-        <Button x:Name="pauseButton" Height="25" Width="25" Style="{StaticResource GellButton}" Foreground="White" Background="Transparent" Grid.ColumnSpan="2" Grid.Row="4" Grid.Column="8">
+        <Button x:Name="pauseButton" Height="25" Width="25" Style="{StaticResource GellButton}" Foreground="White" Background="Transparent" Grid.ColumnSpan="2" Grid.Row="4" Grid.Column="8" Click="pauseButton_Click">
             <Image x:Name="pauseImage" Height="25" Width="25" Stretch="Fill" Source="{Binding ImagePath}"/>
         </Button>
         <Button x:Name="stopButton" Height="25" Width="25" Style="{StaticResource GellButton}" Foreground="White" Background="Transparent" Grid.ColumnSpan="2" Grid.Row="4" Grid.Column="9" Click="stop_click" >
@@ -75,7 +75,7 @@
         <Slider x:Name="volume" Style="{StaticResource Horizontal_Slider}" Maximum="100" Grid.ColumnSpan="5" Grid.Row="0" Grid.Column="13" Margin="0.444,0,41.444,0" ValueChanged="volume_ValueChanged"/>
         <Slider x:Name="timeline" Style="{StaticResource Horizontal_Slider}" Grid.Column="4" Grid.Row="2" Grid.ColumnSpan="10"/>
         <TextBlock x:Name="songTime" Foreground="White" Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="3"/>
-        <ListView x:Name="playListView" Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="11" Grid.RowSpan="7" Margin="0,0,42.667,0" SelectionChanged="playListView_SelectionChanged" MouseDoubleClick="onListViewDoubleClick">
+        <ListView x:Name="playListView"  Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="11" Grid.RowSpan="7" Margin="0,0,42.667,0" SelectionChanged="playListView_SelectionChanged" MouseDoubleClick="onListViewDoubleClick">
             <ListView.View>
                 <GridView AllowsColumnReorder="True">
                     <GridViewColumn DisplayMemberBinding="{Binding Path=number}" Header="Number"></GridViewColumn>
