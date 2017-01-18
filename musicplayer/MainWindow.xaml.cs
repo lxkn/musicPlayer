@@ -210,6 +210,7 @@ namespace mPlayer
 
         private void playListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            //Ustawiamy wartość TextBlocku, w którym będzie się znajdować: artist-title oraz dlugość utworu
             currentSong.Text = (playListView.SelectedItem as Song).artist;
             currentSong.Text += "-";
             currentSong.Text += (playListView.SelectedItem as Song).title;
@@ -243,6 +244,7 @@ namespace mPlayer
             mp3player.settings.volume = Convert.ToInt32(volume.Value);
         }
 
+        //Next Song
         private void nextButtonClick(object sender, RoutedEventArgs e)
         {
             normalIterator = new StandardIterator(songList, (playListView.SelectedIndex));
