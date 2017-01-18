@@ -39,7 +39,7 @@ namespace mPlayer.Classes
         {
             get
             {
-                if (index < songs.Count) { return true; }
+                if (index < (songs.Count-1)) { return true; }
                 else { return false; }
             }
         }

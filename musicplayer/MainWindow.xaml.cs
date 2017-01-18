@@ -225,10 +225,11 @@ namespace mPlayer
            // AlbumInfo albumInfo = new AlbumInfo(songList);
             //albumInfo.Show();
             playListView.ItemsSource=(libraryListView.SelectedItem as Album).songList;
-           /* foreach (Album a in albumList)
-            {
-                songList = a.songList;
-            }*/
+            normalIterator = new StandardIterator((libraryListView.SelectedItem as Album).songList, (playListView.SelectedIndex));
+            /* foreach (Album a in albumList)
+             {
+                 songList = a.songList;
+             }*/
             //playListView.ItemsSource
         }
 
@@ -248,9 +249,8 @@ namespace mPlayer
 
         //Next Song
         private void nextButtonClick(object sender, RoutedEventArgs e)
-        {
-            normalIterator = new StandardIterator((libraryListView.SelectedItem as Album).songList, (playListView.SelectedIndex));
-            tempSong = normalIterator.Next;
+        {   
+                tempSong = normalIterator.Next;
             current_state.nextSong(this);
         }
     }
