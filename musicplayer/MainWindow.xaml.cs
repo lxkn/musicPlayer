@@ -48,7 +48,7 @@ namespace mPlayer
         public WMPLib.WindowsMediaPlayer mp3player = new WMPLib.WindowsMediaPlayer();
         public playAdapter playAdapter = new playAdapter();
 
-        StandardIterator normalIterator;
+        IIterator normalIterator;
        // public Song tempSong;
         public MainWindow()
         {
@@ -252,6 +252,17 @@ namespace mPlayer
         {   
                 tempSong = normalIterator.Next;
             current_state.nextSong(this);
+        }
+        //Previous Song
+        private void previousButtonClick(object sender, RoutedEventArgs e)
+        {
+            tempSong = normalIterator.Next;
+            current_state.previousSong(this);
+        }
+
+        private void shuffleButton_Click(object sender, RoutedEventArgs e)
+        {
+            normalIterator = new RandomListIterator((libraryListView.SelectedItem as Album).songList, (playListView.SelectedIndex));
         }
     }
 

@@ -6,66 +6,68 @@ using System.Threading.Tasks;
 
 namespace mPlayer.Classes
 {
-    class RandomListIterator : IIterator
-    {
-        /*
-        List<Song> songs = null;
-        int index = 0;
-        int tmp = 0;
-
-        public RandomListIterator(List<Song> list, int idx)
+    
+        public class RandomListIterator : IIterator
         {
-            songs = list;
-            index = idx;
-        }
+            List<Song> songs = null;
+            int index = 0;
+            int tmp = 0;
+            List<int> numbers = null;
 
-        Random rnd = new Random();
-
-        List<int> numbers = Enumerable.Range(0, songs.Count).OrderBy(r =>
-        {
-
-            return rnd.Next();
-        }
-        ).ToList();
-
-        Song First { get { index = numbers[0]; tmp = 0; return songs[index]; } }
-        Song Last { get { index = numbers[numbers.Count]; tmp = numbers.Count; return songs[index]; } }
-        Song Next
-        {
-            get
+            public RandomListIterator(List<Song> list, int idx)
             {
-                if (hasNext) { tmp++; index = numbers[tmp]; return songs[index]; }
-                else { tmp = 0; index = numbers[tmp]; return songs[index]; }
-            }
-        }
-        Song Previous
-        {
-            get
-            {
-                if (hasPrevious) { tmp--; index = numbers[tmp]; return songs[index]; }
-                else { tmp = numbers.Count; index = numbers[tmp]; return songs[index]; }
-            }
-        }
-        Boolean hasNext
-        {
-            get
-            {
-                if (index != numbers[numbers.Count]) { return true; }
-                else { return false; }
-            }
-        }
-        Boolean hasPrevious
-        {
-            get
-            {
-                if (index != numbers[0]) { return true; }
-                else { return false; }
-            }
-        }
-        */
+                songs = list;
+                index = idx;
+                Random rnd = new Random();
 
+                numbers = Enumerable.Range(0, songs.Count).OrderBy(r =>
+                {
+
+                    return rnd.Next();
+                }
+                ).ToList();
+            }
+
+
+
+            public Song First { get { index = numbers[0]; tmp = 0; return songs[index]; } }
+            public Song Last { get { index = numbers[numbers.Count - 1]; tmp = numbers.Count - 1; return songs[index]; } }
+            public Song Next
+            {
+                get
+                {
+                    if (hasNext) { tmp++; index = numbers[tmp]; return songs[index]; }
+                    else { tmp = 0; index = numbers[tmp]; return songs[index]; }
+                }
+            }
+            public Song Previous
+            {
+                get
+                {
+                    if (hasPrevious) { tmp--; index = numbers[tmp]; return songs[index]; }
+                    else { tmp = numbers.Count - 1; index = numbers[tmp]; return songs[index]; }
+                }
+            }
+            public Boolean hasNext
+            {
+                get
+                {
+                    if (index != numbers[numbers.Count - 1]) { return true; }
+                    else { return false; }
+                }
+            }
+            public Boolean hasPrevious
+            {
+                get
+                {
+                    if (index != numbers[0]) { return true; }
+                    else { return false; }
+                }
+            }
+
+        }
     }
-}
+
 
 
 
